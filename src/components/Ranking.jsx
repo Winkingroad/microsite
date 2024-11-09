@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 
 const locations = {
   Delhi: [
@@ -91,29 +92,27 @@ const Ranking = () => {
   const [region, setRegion] = useState('');
   const [store, setStore] = useState('');
   const [date, setDate] = useState('');
+  
+  // State for dropdown visibility
+  const [isCityOpen, setCityOpen] = useState(false);
+  const [isRegionOpen, setRegionOpen] = useState(false);
 
   useEffect(() => {
     const ws = new WebSocket("wss://microsite-pbec.onrender.com");
 
     ws.onopen = () => {
-      console.log("WebSocket connection opened.");
+      console.log("WebSocket is open now.");
     };
 
     ws.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-      console.log("Received data:", data);
-      setData(data);
+      const leaderboardData = JSON.parse(event.data);
+      console.log("Received leaderboard data:", leaderboardData);
+      setData(leaderboardData);
     };
 
-    ws.onerror = (event) => {
-      console.error("WebSocket error:", event);
+    return () => {
+      ws.close();
     };
-
-    ws.onclose = (event) => {
-      console.log("WebSocket closed:", event);
-    };
-
-    return () => ws.close();
   }, []);
 
   useEffect(() => {
@@ -124,79 +123,163 @@ const Ranking = () => {
         const matchesDate = date ? entry.Date === date : true;
         return matchesRegion && matchesStore && matchesDate;
       });
-
-      // Update ranks to be continuous numbers
-      const updatedFilteredData = filtered.map((entry, index) => ({
-        ...entry,
-        Rank: index + 1, // Assign a continuous rank based on index
-      }));
-
-      setFilteredData(updatedFilteredData);
+      setFilteredData(filtered);
     };
 
     filterData();
   }, [data, region, store, date]);
 
-  const handleRegionChange = (e) => {
-    setRegion(e.target.value);
+  const handleRegionChange = (selectedRegion) => {
+    setRegion(selectedRegion);
     setStore(''); // Reset store when region changes
+    setCityOpen(false);
   };
 
+  const handleStoreChange = (selectedStore) => {
+    setStore(selectedStore);
+    setRegionOpen(false);
+  };
+
+  // Click outside handler
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('.dropdown-container')) {
+        setCityOpen(false);
+        setRegionOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen p-8 text-white w-full bg-main-bg bg-cover bg-center flex justify-center">
-      <div className="bg-transparent p-6 rounded-lg shadow-md mb-6 w-full">
-        <div className="flex flex-col w-full items-center space-y-4 mb-6">
-          <select
-            value={region}
-            onChange={handleRegionChange}
-            className="bg-gray-800 bg-opacity-40 text-white py-2 px-4 rounded focus:outline-none w-2/3"
-          >
-            <option value="">Select Your City</option>
-            {Object.keys(locations).map(city => (
-              <option className='bg-gray-900' key={city} value={city}>{city}</option>
-            ))}
-          </select>
+    <div className="min-h-screen p-2 sm:p-4 md:p-8 text-white w-full bg-main-bg bg-cover bg-center">
+      <div className="max-w-7xl mx-auto bg-transparent rounded shadow-md mb-4 md:mb-6">
+        {/* Filters Section */}
+        <div className="flex flex-col w-full items-center space-y-3 md:space-y-4 mb-4 md:mb-6 px-2 md:px-6">
+          {/* City Dropdown */}
+          <div className="w-full md:w-2/3 dropdown-container relative">
+            <button
+              onClick={() => setCityOpen(!isCityOpen)}
+              className="w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500 flex justify-between items-center"
+            >
+              <span>{region || "Select Your City"}</span>
+              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isCityOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            {isCityOpen && (
+  <div 
+    className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50"
+    style={{ 
+      msOverflowStyle: 'none',
+      scrollbarWidth: 'none',
+      '::-webkit-scrollbar': {
+        display: 'none'
+      }
+    }}
+  >
+    {Object.keys(locations).map(city => (
+      <div
+        key={city}
+        className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
+        onClick={() => handleRegionChange(city)}
+      >
+        {city}
+      </div>
+    ))}
+  </div>
+)}
+          </div>
 
-          <select
-            value={store}
-            onChange={(e) => setStore(e.target.value)}
-            className="bg-gray-800 bg-opacity-40 text-white py-2 px-4 rounded focus:outline-none w-2/3"
-            disabled={!region}
-          >
-            <option value="">Select Your Region</option>
-            {region && locations[region].map(({ region }) => (
-              <option className='bg-gray-900' key={region} value={region}>{region}</option>
-            ))}
-          </select>
+          {/* Region Dropdown */}
+          <div className="w-full md:w-2/3 dropdown-container relative">
+            <button
+              onClick={() => region && setRegionOpen(!isRegionOpen)}
+              disabled={!region}
+              className={`w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500 flex justify-between items-center ${!region && 'opacity-50 cursor-not-allowed'}`}
+            >
+              <span>{store || "Select Your Region"}</span>
+              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isRegionOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            {isRegionOpen && region && (
+              <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50"
+              style={{ 
+                msOverflowStyle: 'none',
+                scrollbarWidth: 'none',
+                '::-webkit-scrollbar': {
+                  display: 'none'
+                }
+              }}
+              >
+                {locations[region].map(({ region: storeRegion }) => (
+                  <div
+                    key={storeRegion}
+                    className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
+                    onClick={() => handleStoreChange(storeRegion)}
+                  >
+                    {storeRegion}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
 
-          <input
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            placeholder='Select the Date'
-            className="bg-gray-800 bg-opacity-40 text-white py-2 px-4 rounded focus:outline-none w-2/3"
-          />
+          {/* Date Input */}
+          <div className="w-full md:w-2/3">
+            <input
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              className="w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
         </div>
 
-        <div className="w-full overflow-y-auto border-gray-900 border-2 items-center rounded-xl" style={{ maxHeight: '500px', scrollbarWidth: 'none' }}>
-          <table className="w-full bg-gray-900 bg-opacity-10 text-center rounded-lg overflow-hidden">
-            <thead>
-              <tr>
-                <th className="py-2 px-4 border-b-2 border-gray-700 border-r-2 w-1/6">Ranking</th>
-                <th className="py-2 px-4 border-b-2 border-gray-700 border-r-2 w-1/3">Name</th>
-                <th className="py-2 px-4 border-b-2 border-gray-700 w-1/3">Lap Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredData.map((entry, index) => (
-                <tr key={index} className="hover:bg-gray-800 transition duration-200">
-                  <td className="py-2 px-4 border-b-2 border-gray-700 border-r-2">{entry.Rank}</td>
-                  <td className="py-2 px-4 border-b-2 border-gray-700 border-r-2">{entry.Name}</td>
-                  <td className="py-2 px-4 border-b-2 border-gray-700">{entry.LapTime}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        {/* Table Section */}
+        <div className="w-full overflow-x-auto overflow-y-auto border-gray-900 border rounded-xl"
+             style={{ maxHeight: '70vh', scrollbarWidth: 'none' }}>
+          <div className="min-w-full inline-block align-middle">
+            <div className="overflow-hidden">
+              <table className="min-w-full divide-y divide-gray-700">
+                <thead className="bg-gray-900 bg-opacity-50">
+                  <tr>
+                    <th scope="col" 
+                        className="px-3 md:px-4 py-2 md:py-3 text-center text-xs md:text-sm font-semibold text-white uppercase tracking-wider w-1/6 border-r-2 border-gray-500">
+                      Ranking
+                    </th>
+                    <th scope="col" 
+                        className="px-3 md:px-4 py-2 md:py-3 text-center text-xs md:text-sm font-semibold text-white uppercase tracking-wider w-1/2 md:w-1/3 border-r-2 border-gray-500">
+                      Name
+                    </th>
+                    <th scope="col" 
+                        className="px-3 md:px-4 py-2 md:py-3 text-center text-xs md:text-sm font-semibold text-white uppercase tracking-wider w-1/3">
+                      Lap Time
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-gray-900 bg-opacity-10 divide-y divide-gray-700">
+                  {filteredData.map((entry, index) => (
+                    <tr key={index} 
+                        className="hover:bg-gray-800 hover:bg-opacity-50 transition-colors duration-200 ">
+                      <td className="px-3 md:px-4 py-2 md:py-3 whitespace-nowrap text-xs md:text-sm text-white border-r-2 border-gray-500 text-center">
+                        {entry.Rank}
+                      </td>
+                      <td className="px-3 md:px-4 py-2 md:py-3 whitespace-nowrap text-xs md:text-sm text-white border-r-2 border-gray-500 text-center">
+                        {entry.Name}
+                      </td>
+                      <td className="px-3 md:px-4 py-2 md:py-3 whitespace-nowrap text-xs md:text-sm text-white  text-center">
+                        {entry.LapTime}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>

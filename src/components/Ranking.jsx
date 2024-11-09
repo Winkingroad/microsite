@@ -94,29 +94,27 @@ const Ranking = () => {
 
   useEffect(() => {
     const ws = new WebSocket("wss://microsite-pbec.onrender.com");
-  
+
     ws.onopen = () => {
       console.log("WebSocket connection opened.");
     };
-  
+
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       console.log("Received data:", data);
       setData(data);
     };
-  
+
     ws.onerror = (event) => {
       console.error("WebSocket error:", event);
     };
-  
+
     ws.onclose = (event) => {
       console.log("WebSocket closed:", event);
     };
-  
+
     return () => ws.close();
   }, []);
-  
-  
 
   useEffect(() => {
     const filterData = () => {
@@ -126,7 +124,14 @@ const Ranking = () => {
         const matchesDate = date ? entry.Date === date : true;
         return matchesRegion && matchesStore && matchesDate;
       });
-      setFilteredData(filtered);
+
+      // Update ranks to be continuous numbers
+      const updatedFilteredData = filtered.map((entry, index) => ({
+        ...entry,
+        Rank: index + 1, // Assign a continuous rank based on index
+      }));
+
+      setFilteredData(updatedFilteredData);
     };
 
     filterData();
@@ -170,7 +175,6 @@ const Ranking = () => {
             onChange={(e) => setDate(e.target.value)}
             placeholder='Select the Date'
             className="bg-gray-800 bg-opacity-40 text-white py-2 px-4 rounded focus:outline-none w-2/3"
-            
           />
         </div>
 

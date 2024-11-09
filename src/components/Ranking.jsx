@@ -93,23 +93,30 @@ const Ranking = () => {
   const [date, setDate] = useState('');
 
   useEffect(() => {
-    const ws = new WebSocket(process.env.REACT_APP_WS_URL || 'ws://localhost:8080');
-
-
+    const ws = new WebSocket("wss://microsite-pbec.onrender.com");
+  
     ws.onopen = () => {
-      console.log("WebSocket is open now.");
+      console.log("WebSocket connection opened.");
     };
-
+  
     ws.onmessage = (event) => {
-      const leaderboardData = JSON.parse(event.data);
-      console.log("Received leaderboard data:", leaderboardData);
-      setData(leaderboardData);
+      const data = JSON.parse(event.data);
+      console.log("Received data:", data);
+      setData(data);
     };
-
-    return () => {
-      ws.close();
+  
+    ws.onerror = (event) => {
+      console.error("WebSocket error:", event);
     };
+  
+    ws.onclose = (event) => {
+      console.log("WebSocket closed:", event);
+    };
+  
+    return () => ws.close();
   }, []);
+  
+  
 
   useEffect(() => {
     const filterData = () => {

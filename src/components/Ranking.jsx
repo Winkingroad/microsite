@@ -113,7 +113,7 @@ const Ranking = () => {
     return () => {
       ws.close();
     };
-  }, []);
+  });
 
   useEffect(() => {
     const filterData = () => {

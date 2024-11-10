@@ -117,15 +117,17 @@ const Ranking = () => {
 
   useEffect(() => {
     const filterData = () => {
-      const filtered = data.filter(entry => {
-        const matchesRegion = region ? entry.Region === region : true;
-        const matchesStore = store ? entry.Store === store : true;
-        const matchesDate = date ? entry.Date === date : true;
-        return matchesRegion && matchesStore && matchesDate;
-      });
+      const filtered = data
+        .filter(entry => {
+          const matchesRegion = region ? entry.Region === region : true;
+          const matchesStore = store ? entry.Store === store : true;
+          const matchesDate = date ? entry.Date === date : true;
+          return matchesRegion && matchesStore && matchesDate;
+        })
+        .map((entry, index) => ({ ...entry, serial: index + 1 })); // Add rank starting from 1
       setFilteredData(filtered);
     };
-
+  
     filterData();
   }, [data, region, store, date]);
 
@@ -266,7 +268,7 @@ const Ranking = () => {
                     <tr key={index} 
                         className="hover:bg-gray-800 hover:bg-opacity-50 transition-colors duration-200 ">
                       <td className="px-3 md:px-4 py-2 md:py-3 whitespace-nowrap text-xs md:text-sm text-white border-r-2 border-gray-500 text-center">
-                        {entry.Rank}
+                        {entry.serial}
                       </td>
                       <td className="px-3 md:px-4 py-2 md:py-3 whitespace-nowrap text-xs md:text-sm text-white border-r-2 border-gray-500 text-center">
                         {entry.Name}

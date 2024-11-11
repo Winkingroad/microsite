@@ -51,3 +51,14 @@ code {
   box-shadow: 0px 0px 2.3px 0.5px #0B5197;
   pointer-events: none;
 }
+/* Custom CSS to style the date input when it's empty */
+.date-input-container input:placeholder-shown + .placeholder-text {
+  display: block;
+}
+.date-input-container input:not(:placeholder-shown) + .placeholder-text {
+  display: none;
+}
+/* input[type=date]::-webkit-datetime-edit {
+  display: none;
+} */
+input[type=date]::-webkit-calendar-picker-indicator { background-image: url(./assets/calendar.png); background-size: 20px; }

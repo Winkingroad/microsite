@@ -233,12 +233,15 @@ const Ranking = () => {
           {/* Date Input */}
           <div className="w-full md:w-2/3">
             <input
+              placeholder='Select the date'
+              onfocus="(this.type='date')"
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
               className="w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
+          
         </div>
 
         {/* Table Section */}

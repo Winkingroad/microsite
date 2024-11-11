@@ -52,12 +52,12 @@ code {
   pointer-events: none;
 }
 /* Custom CSS to style the date input when it's empty */
-.date-input-container input:placeholder-shown + .placeholder-text {
+/* .date-input-container input:placeholder-shown + .placeholder-text {
   display: block;
 }
 .date-input-container input:not(:placeholder-shown) + .placeholder-text {
   display: none;
-}
+} */
 /* input[type=date]::-webkit-datetime-edit {
   display: none;
 } */

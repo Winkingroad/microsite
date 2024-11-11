@@ -3,87 +3,93 @@ import { ChevronDown } from 'lucide-react';
 
 const locations = {
   Delhi: [
-      { region: "South Extension", address: "No G26 Part 1 Near Bombay Shirt Company, South Extension, New Delhi, Delhi 110049" },
-      { region: "Ambience Mall, Vasant Kunj", address: "No F107, 1st Floor, Ambience Mall, Vasant Kunj, New Delhi, Delhi 110070" },
-      { region: "Paschim Vihar", address: "No B2/8, Near HDFC Bank, Paschim Vihar, New Delhi, Delhi 110063" },
-      { region: "Connaught Circus", address: "N45, Pratap Building, N Block, Opposite Statesman House, Connaught Circus, New Delhi, Delhi 110001" },
-      { region: "Rajouri Garden", address: "No A2/40 Main Market Chowk, Rajouri Garden, New Delhi, Delhi 110027" },
-      { region: "Select City Walk, Saket", address: "F 29, 1st Floor, Select City Walk, Near Malvia Nagar Metro Station Gate No 3, Saket, New Delhi, Delhi 110017" },
-  ],
-  Noida: [
-      { region: "Sector 18, JOP Plaza", address: "Shop No 7, Ground Floor, JOP Plaza, Opposite Mc Donalds, Sector 18, Noida, Uttar Pradesh 201301" },
-      { region: "Wave Silver Tower", address: "Unit No 12, Plot No 6, Wave Silver Tower, Behind Bikanerwala, Sector 18, Noida, Uttar Pradesh 201301" },
-      { region: "DLF Mall of India", address: "No E/245, 1st Floor, DLF Mall of India, Opposite Radisson Hotel, Sector 18, Noida, Uttar Pradesh 201301" },
+    { region: "Samsung Experience Store - Star Mobitel Ltd South Ex - South Extension", address: "South Extension, New Delhi, Delhi 110049" },
+    { region: "Samsung Experience Store - Ambience Vasant Kunj", address: "Ambience Mall, Vasant Kunj, New Delhi, Delhi 110070" },
+    { region: "Samsung Experience Store - Aidhi Projects Pvt Ltd - Rajouri Garden", address: "Rajouri Garden, New Delhi, Delhi 110027" },
+    { region: "Samsung Experience Store - Metro Mobiles - Paschim Vihar", address: "Paschim Vihar, New Delhi, Delhi 110063" },
+    { region: "Samsung Experience Store - Connaught Place", address: "Connaught Place, New Delhi, Delhi 110001" },
+    { region: "Samsung Experience Store - Select Citywalk Saket", address: "Select Citywalk Mall, Saket, New Delhi, Delhi 110017" }
   ],
   Gurgaon: [
-      { region: "Cyber City, DLF Phase 2", address: "Building No 10B, DLF Cyber City, DLF Phase 2, Sector 24, Gurugram, Haryana 122002" },
-      { region: "Ambience Mall", address: "No S242, 2nd Floor, Ambience Mall, NH 8 Ambience Island, DLF Phase 3, Sector 24, Gurugram, Haryana 122002" },
+    { region: "Samsung Experience Store - Spectra & Star Convergence Limited - Ambience Mall", address: "Ambience Mall, Gurgaon, Haryana 122002" },
+    { region: "Samsung Experience Store - Cyberhub", address: "Cyberhub, DLF Cyber City, Gurgaon, Haryana 122002" }
   ],
-  Chandigarh: [
-      { region: "Sector 35 C", address: "SCO 464 & 465 Outer Market, Sector 35 C, Chandigarh, Chandigarh 160035" },
-      { region: "Sector 22", address: "Sco 1026 & 1027, Sector 22, Chandigarh, Chandigarh 160022" },
-      { region: "Elante Mall, Phase 1", address: "Shop No 245, 2nd Floor, Elante Mall, Phase 1, Industrial Area, Chandigarh, Chandigarh 160002" },
+  Noida: [
+    { region: "Samsung Experience Store - Agmatel India Pvt. Ltd. - DLF Mall of India", address: "DLF Mall of India, Sector 18, Noida, Uttar Pradesh 201301" },
+    { region: "Samsung Experience Store - Tech Mart - Sector 18", address: "Sector 18, Noida, Uttar Pradesh 201301" },
+    { region: "Samsung Experience Store - Device Mart Private Limited - Sector 18", address: "Sector 18, Noida, Uttar Pradesh 201301" }
   ],
   Dehradun: [
-      { region: "Pacific Mall, Jakhan", address: "Shop No 04, LGF, Pacific Mall, Rajpur Road, Jakhan, Dehradun, Uttarakhand 248006" },
-      { region: "Chakrata Road", address: "No 16 Chakrata Road, Opposite LIC Building, Old Connaught Place, Dehradun, Uttarakhand 248001" },
-  ],
-  Kolkata: [
-      { region: "South City Mall", address: "375, SN B006A, Basement, South City Mall, Prince Anwar Shah Rd, Kolkata, West Bengal 700068" },
-      { region: "Park Street", address: "No 21, Ground Floor, Near Park Hotel, Park Street, Kolkata, West Bengal 700016" },
-  ],
-  Ahmedabad: [
-      { region: "Palladium Mall, Thaltej", address: "No G1 to 3, Palladium Mall, SG Highway, Thaltej, Ahmedabad, Gujarat 380054" },
-      { region: "Shivalik Arcade", address: "No 3, Shivalik Arcade, Besides HDFC Bank, Prahlad Nagar Road, Ahmedabad, Gujarat 380015" },
-      { region: "Sigma Esquire, Maninagar", address: "No 01, Ground Floor, Sigma Esquire, Besides Dominos Pizza, Maninagar, Ahmedabad, Gujarat 380008" },
-  ],
-  Surat: [
-      { region: "Vivanta Icon", address: "Shop No G6, Vivanta Icon, LP Savani Road, Near Madhuvan Circle, Adajan, Surat, Gujarat 395009" },
-      { region: "International Business Center", address: "SN G14, International Business Center, Dumas Road, Near Mercedes Showroom, Piplod, Surat, Gujarat 395007" },
-  ],
-  Pune: [
-      { region: "Barve Memorial Complex", address: "Shop No 1, Barve Memorial Complex, Opposite Panchali Hotel, Jangli Maharaj Road, Pune, Maharashtra 411005" },
-      { region: "Premier Tower Solitare World", address: "S No 7, GF, Premier Tower Solitare World, Bibwewadi, Pune, Maharashtra 411037" },
-      { region: "Phoenix Marketcity, Viman Nagar", address: "Shop No 18, LGF, Phoenix Marketcity, Nagar Road, Clover Park, Viman Nagar, Pune, Maharashtra 411014" },
-      { region: "Seasons Mall, Magarpatta", address: "No G20A/B, Ground Floor, Seasons Mall, Magarpatta, Hadapsar, Pune, Maharashtra 411013" },
-      { region: "Mall of Millennium", address: "Unit No UG06, UGF, Mall of Millennium, Behind Sayaji Hotel, Wakad, Pune, Maharashtra 411057" },
-  ],
-  Bangalore: [
-      { region: "Nexus Mall, Whitefield", address: "No 62, Prestige Ozone Main Road, Near Nexus Mall, Whitefield, Bengaluru, Karnataka 560066" },
-      { region: "Electronic City", address: "Shop No 62/B, Ground Floor, Phase 1, Opposite Post Office, Electronic City, Bengaluru, Karnataka 560100" },
-      { region: "Lulu Mall", address: "Unit No G26, Upper Ground Flr, Lulu Mall, No 19/2, Mysore Deviation Road, Gopalapura, Bengaluru, Karnataka 560023" },
-      { region: "Indiranagar", address: "No 514 Defence Colony, Next To ICICI Bank, Indiranagar, Bengaluru, Karnataka 560038" },
-      { region: "UB City, Vittal Malaya Road", address: "No 24, Shop No S216, 2nd Floor, UB City Canberra Block, Vittal Malaya Road, Bengaluru, Karnataka 560001" },
-      { region: "Phoenix Mall of Asia, Yelahanka", address: "S47 & 48, 2nd Flr, Phoenix Mall of Asia, Byatarayanapura, Near Mall of Asia, Yelahanka, Bengaluru, Karnataka 560092" },
-      { region: "Marathalli", address: "No 97/2, Ground Floor, Marathalli Main Road, Next to SBI Bank, Marathalli, Bengaluru, Karnataka 560037" },
-      { region: "Brigade Road", address: "No 57 Brigade Road, Shanthala Nagar, Near Junction of Residency Road, Ashok Nagar, Bengaluru, Karnataka 560025" },
-  ],
-  Hyderabad: [
-      { region: "Himayat Nagar", address: "No 3/6/369/B/3/1, Beside TTD Temple, Himayat Nagar, Hyderabad, Telangana 500029" },
-      { region: "DSL Virtue Mall, Uppal", address: "Unit No UGF 07, DSL Virtue Mall, Warangal Hwy, Near Rajiv Gandhi Intnl Cricket Stadium, Uppal, Hyderabad, Telangana 500039" },
-      { region: "Inorbit Mall, Madhapur", address: "S No 64, Level 2, APIIC Software Layout, Inorbit Mall Road, Mindspace, Madhapur, Hyderabad, Telangana 500081" },
-      { region: "Maphars MK Eternal, Madhapur", address: "Plot No 2/45/G3, Maphars MK Eternal, Beside Linen Club, Madhapur, Hyderabad, Telangana 500081" },
-      { region: "Kondapur", address: "H No 2/40/1/A/A, Survey No 19 PN 1, Ravi Colony, Rangareddy, Beside Aptronix, Kondapur, Hyderabad, Telangana 500084" },
-  ],
-  Chennai: [
-      { region: "Velachery", address: "Shop No G5/G6, No 142, LGF, Near Phoenix Market City, Velachery, Chennai, Tamil Nadu 600042" },
-  ],
-  Trivandrum: [
-      { region: "Lulu Mall, Anayara", address: "TC 91/270, Unit No D14, GF, Lulu Mall, Anayara, Thiruvananthapuram, Kerala 695029" },
+    { region: "Samsung Experience Store - Arora Enterprises - Old Connaught Place", address: "Old Connaught Place, Dehradun, Uttarakhand 248001" },
+    { region: "Samsung Experience Store - Pacific Mall Dehradun", address: "Pacific Mall, Dehradun, Uttarakhand 248001" }
   ],
   Lucknow: [
-      { region: "One Awadh Center", address: "Unit No G31, GF, One Awadh Center,  TC G 2/1, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010" },
+    { region: "Samsung Experience Store - Lulu Mall Lucknow", address: "Lulu Mall, Lucknow, Uttar Pradesh 226010" }
   ],
   Mumbai: [
-      { region: "High Street Phoenix, Lower Parel", address: "Unit No 26, UG-23A, 2nd Floor, High Street Phoenix, Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra 400013" },
-  ],
-  Navi_Mumbai: [
-      { region: "Seawoods Grand Central Mall", address: "No UG-008, Upper Ground Flr, Seawoods Grand Central Mall, Nerul, Navi Mumbai, Maharashtra 400706" },
+    { region: "Samsung Experience Store - Retail Shop - Lower Parel", address: "Lower Parel, Mumbai, Maharashtra 400013" },
+    { region: "Samsung Experience Store - Ssk Retails Pvt Ltd - Phoenix Market City Mall", address: "Phoenix Market City Mall, Mumbai, Maharashtra 400070" }
   ],
   Virar: [
-      { region: "Yazoo Park", address: "Shop No 3, Yazoo Park, Near Viva College, Global City, Virar, Maharashtra 401303" },
+    { region: "Samsung Experience Store - Infiniti Telecom - Virar West", address: "Virar West, Virar, Maharashtra 401303" }
   ],
+  NaviMumbai: [
+    { region: "Samsung Experience Store - Breathe Enterprises - Koparkhairane", address: "Koparkhairane, Navi Mumbai, Maharashtra 400709" }
+  ],
+  Pune: [
+    { region: "Samsung Experience Store - Karuna Management Services Limited - Viman Nagar", address: "Viman Nagar, Pune, Maharashtra 411014" },
+    { region: "Samsung Experience Store - Tech Star Retail - Seasons Mall", address: "Seasons Mall, Pune, Maharashtra 411028" },
+    { region: "Samsung Experience Store - Navkar Communication - Bibvewadi", address: "Bibvewadi, Pune, Maharashtra 411037" },
+    { region: "Samsung Experience Store - Mall of Millennium Pune", address: "Mall of Millennium, Pune, Maharashtra 411045" },
+    { region: "Samsung Experience Store - Ssk Retails Pvt Ltd - Jangli Maharaj Road", address: "Jangli Maharaj Road, Pune, Maharashtra 411005" }
+  ],
+  Bangalore: [
+    { region: "Samsung Experience Store - Concepts Inc - Marathalli", address: "Marathalli, Bangalore, Karnataka 560037" },
+    { region: "Samsung Experience Store - Mall of Asia Bengaluru", address: "Mall of Asia, Bangalore, Karnataka 560037" },
+    { region: "Samsung Experience Store - Touch Tech Telecom - Electronic City", address: "Electronic City, Bangalore, Karnataka 560100" },
+    { region: "Samsung Experience Store - IT World - Lulu Mall", address: "Lulu Mall, Bangalore, Karnataka 560068" },
+    { region: "Samsung Experience Store - Concepts Inc - Indiranagar", address: "Indiranagar, Bangalore, Karnataka 560038" },
+    { region: "Samsung Experience Store - UB City Bengaluru", address: "UB City Mall, Bangalore, Karnataka 560001" },
+    { region: "Experience Store - Samsung Opera House", address: "Opera House, Bangalore, Karnataka 560002" }
+  ],
+  Hyderabad: [
+    { region: "Samsung Experience Store - Inorbit Mall Hyderabad", address: "Inorbit Mall, Hyderabad, Telangana 500081" },
+    { region: "Samsung Experience Store - Vasisht Retail - Madhapur", address: "Madhapur, Hyderabad, Telangana 500081" },
+    { region: "Samsung Experience Store - Premium Lifestyle India Pvt Ltd - Kondapur", address: "Kondapur, Hyderabad, Telangana 500084" },
+    { region: "Samsung Experience Store - S.S. Communications - Himayat Nagar", address: "Himayat Nagar, Hyderabad, Telangana 500029" }
+  ],
+  Secunderabad: [
+    { region: "Samsung Experience Store - IT World - DSL Virtue Mall", address: "DSL Virtue Mall, Secunderabad, Telangana 500003" }
+  ],
+  Chennai: [
+    { region: "Samsung Experience Store - Phoenix MarketCity Chennai", address: "Phoenix MarketCity, Chennai, Tamil Nadu 600042" }
+  ],
+  Mohali: [
+    { region: "Samsung Experience Store - CP67 Mohali", address: "CP67 Mall, Mohali, Punjab 160062" }
+  ],
+  Chandigarh: [
+    { region: "Samsung Experience Store - Elante Mall Chandigarh", address: "Elante Mall, Chandigarh, Punjab 160002" },
+    { region: "Samsung Experience Store - Electro Photo Equipments Pvt Ltd - Sector 35 C", address: "Sector 35 C, Chandigarh, Punjab 160022" },
+    { region: "Samsung Experience Store - Electrophoto Equipments Private Limited - Sector 22", address: "Sector 22, Chandigarh, Punjab 160022" }
+  ],
+  Kolkata: [
+    { region: "Samsung Experience Store - Park Street Kolkata", address: "Park Street, Kolkata, West Bengal 700016" },
+    { region: "Samsung Experience Store - R G Networks - South City Mall", address: "South City Mall, Kolkata, West Bengal 700068" }
+  ],
+  Ahmedabad: [
+    { region: "Samsung Experience Store - Techno Ventures - Maninagar", address: "Maninagar, Ahmedabad, Gujarat 380008" },
+    { region: "Samsung Experience Store - Palladium Ahmedabad", address: "Palladium Mall, Ahmedabad, Gujarat 380054" },
+    { region: "Samsung Experience Store - Techno Ventures - Prahlad Nagar Road", address: "Prahlad Nagar Road, Ahmedabad, Gujarat 380015" }
+  ],
+  Surat: [
+    { region: "Samsung Experience Store - Shivam Sales - Adajan", address: "Adajan, Surat, Gujarat 395009" },
+    { region: "Samsung Experience Store - IBC Surat", address: "IBC Mall, Surat, Gujarat 395007" }
+  ],
+  Trivandrum: [
+    { region: "Samsung Experience Store - Lulu Mall Trivandrum", address: "Lulu Mall, Trivandrum, Kerala 695029" }
+  ]
 };
+
 
 
 const Ranking = () => {

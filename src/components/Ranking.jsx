@@ -7,92 +7,92 @@ import { format } from 'date-fns';
 
 const locations = {
   Delhi: [
-    { region: "Samsung Experience Store - Star Mobitel Ltd South Ex - South Extension", address: "South Extension, New Delhi, Delhi 110049" },
-    { region: "Samsung Experience Store - Ambience Vasant Kunj", address: "Ambience Mall, Vasant Kunj, New Delhi, Delhi 110070" },
-    { region: "Samsung Experience Store - Aidhi Projects Pvt Ltd - Rajouri Garden", address: "Rajouri Garden, New Delhi, Delhi 110027" },
-    { region: "Samsung Experience Store - Metro Mobiles - Paschim Vihar", address: "Paschim Vihar, New Delhi, Delhi 110063" },
-    { region: "Samsung Experience Store - Connaught Place", address: "Connaught Place, New Delhi, Delhi 110001" },
-    { region: "Samsung Experience Store - Select Citywalk Saket", address: "Select Citywalk Mall, Saket, New Delhi, Delhi 110017" }
+    { region: "Samsung Experience Store - Star Mobitel Ltd South Ex - South Extension (7th and 8th December 2024)", address: "South Extension, New Delhi, Delhi 110049" },
+    { region: "Samsung Experience Store - Ambience Vasant Kunj (7th and 8th December 2024)", address: "Ambience Mall, Vasant Kunj, New Delhi, Delhi 110070" },
+    { region: "Samsung Experience Store - Aidhi Projects Pvt Ltd - Rajouri Garden (23rd and 24th November 2024)", address: "Rajouri Garden, New Delhi, Delhi 110027" },
+    { region: "Samsung Experience Store - Metro Mobiles - Paschim Vihar (30th Nov and 1st Dec 2024)", address: "Paschim Vihar, New Delhi, Delhi 110063" },
+    { region: "Samsung Experience Store - Connaught Place (30th Nov and 1st Dec 2024)", address: "Connaught Place, New Delhi, Delhi 110001" },
+    { region: "Samsung Experience Store - Select Citywalk Saket (16th and 17th November 2024)", address: "Select Citywalk Mall, Saket, New Delhi, Delhi 110017" }
   ],
   Gurgaon: [
-    { region: "Samsung Experience Store - Spectra & Star Convergence Limited - Ambience Mall", address: "Ambience Mall, Gurgaon, Haryana 122002" },
-    { region: "Samsung Experience Store - Cyberhub", address: "Cyberhub, DLF Cyber City, Gurgaon, Haryana 122002" }
+    { region: "Samsung Experience Store - Spectra & Star Convergence Limited - Ambience Mall (16th and 17th November 2024)", address: "Ambience Mall, Gurgaon, Haryana 122002" },
+    { region: "Samsung Experience Store - Cyberhub (30th Nov and 1st Dec 2024)", address: "Cyberhub, DLF Cyber City, Gurgaon, Haryana 122002" }
   ],
   Noida: [
-    { region: "Samsung Experience Store - Agmatel India Pvt. Ltd. - DLF Mall of India", address: "DLF Mall of India, Sector 18, Noida, Uttar Pradesh 201301" },
-    { region: "Samsung Experience Store - Tech Mart - Sector 18", address: "Sector 18, Noida, Uttar Pradesh 201301" },
-    { region: "Samsung Experience Store - Device Mart Private Limited - Sector 18", address: "Sector 18, Noida, Uttar Pradesh 201301" }
+    { region: "Samsung Experience Store - Agmatel India Pvt. Ltd. - DLF Mall of India (23rd and 24th November 2024)", address: "DLF Mall of India, Sector 18, Noida, Uttar Pradesh 201301" },
+    { region: "Samsung Experience Store - Tech Mart - Sector 18 (7th and 8th December 2024)", address: "Sector 18, Noida, Uttar Pradesh 201301" },
+    { region: "Samsung Experience Store - Device Mart Private Limited - Sector 18 (7th and 8th December 2024)", address: "Sector 18, Noida, Uttar Pradesh 201301" }
   ],
   Dehradun: [
-    { region: "Samsung Experience Store - Arora Enterprises - Old Connaught Place", address: "Old Connaught Place, Dehradun, Uttarakhand 248001" },
-    { region: "Samsung Experience Store - Pacific Mall Dehradun", address: "Pacific Mall, Dehradun, Uttarakhand 248001" }
+    { region: "Samsung Experience Store - Arora Enterprises - Old Connaught Place (23rd and 24th November 2024)", address: "Old Connaught Place, Dehradun, Uttarakhand 248001" },
+    { region: "Samsung Experience Store - Pacific Mall Dehradun (7th and 8th December 2024)", address: "Pacific Mall, Dehradun, Uttarakhand 248001" }
   ],
   Lucknow: [
-    { region: "Samsung Experience Store - Lulu Mall Lucknow", address: "Lulu Mall, Lucknow, Uttar Pradesh 226010" }
+    { region: "Samsung Experience Store - Lulu Mall Lucknow (23rd and 24th November 2024)", address: "Lulu Mall, Lucknow, Uttar Pradesh 226010" }
   ],
   Mumbai: [
-    { region: "Samsung Experience Store - Retail Shop - Lower Parel", address: "Lower Parel, Mumbai, Maharashtra 400013" },
-    { region: "Samsung Experience Store - Ssk Retails Pvt Ltd - Phoenix Market City Mall", address: "Phoenix Market City Mall, Mumbai, Maharashtra 400070" }
+    { region: "Samsung Experience Store - Retail Shop - Lower Parel (23rd and 24th November 2024)", address: "Lower Parel, Mumbai, Maharashtra 400013" },
+    { region: "Samsung Experience Store - Ssk Retails Pvt Ltd - Phoenix Market City Mall (16th and 17th November 2024)", address: "Phoenix Market City Mall, Mumbai, Maharashtra 400070" }
   ],
   Virar: [
-    { region: "Samsung Experience Store - Infiniti Telecom - Virar West", address: "Virar West, Virar, Maharashtra 401303" }
+    { region: "Samsung Experience Store - Infiniti Telecom - Virar West (23rd and 24th November 2024)", address: "Virar West, Virar, Maharashtra 401303" }
   ],
   NaviMumbai: [
-    { region: "Samsung Experience Store - Breathe Enterprises - Koparkhairane", address: "Koparkhairane, Navi Mumbai, Maharashtra 400709" }
+    { region: "Samsung Experience Store - Breathe Enterprises - Koparkhairane (16th and 17th November 2024)", address: "Koparkhairane, Navi Mumbai, Maharashtra 400709" }
   ],
   Pune: [
-    { region: "Samsung Experience Store - Karuna Management Services Limited - Viman Nagar", address: "Viman Nagar, Pune, Maharashtra 411014" },
-    { region: "Samsung Experience Store - Tech Star Retail - Seasons Mall", address: "Seasons Mall, Pune, Maharashtra 411028" },
-    { region: "Samsung Experience Store - Navkar Communication - Bibvewadi", address: "Bibvewadi, Pune, Maharashtra 411037" },
-    { region: "Samsung Experience Store - Mall of Millennium Pune", address: "Mall of Millennium, Pune, Maharashtra 411045" },
-    { region: "Samsung Experience Store - Ssk Retails Pvt Ltd - Jangli Maharaj Road", address: "Jangli Maharaj Road, Pune, Maharashtra 411005" }
+    { region: "Samsung Experience Store - Karuna Management Services Limited - Viman Nagar (23rd and 24th November 2024)", address: "Viman Nagar, Pune, Maharashtra 411014" },
+    { region: "Samsung Experience Store - Tech Star Retail - Seasons Mall (23rd and 24th November 2024)", address: "Seasons Mall, Pune, Maharashtra 411028" },
+    { region: "Samsung Experience Store - Navkar Communication - Bibvewadi (30th Nov and 1st Dec 2024)", address: "Bibvewadi, Pune, Maharashtra 411037" },
+    { region: "Samsung Experience Store - Mall of Millennium Pune (16th and 17th November 2024)", address: "Mall of Millennium, Pune, Maharashtra 411045" },
+    { region: "Samsung Experience Store - Ssk Retails Pvt Ltd - Jangli Maharaj Road (7th and 8th December 2024)", address: "Jangli Maharaj Road, Pune, Maharashtra 411005" }
   ],
   Bangalore: [
-    { region: "Samsung Experience Store - Concepts Inc - Marathalli", address: "Marathalli, Bangalore, Karnataka 560037" },
-    { region: "Samsung Experience Store - Mall of Asia Bengaluru", address: "Mall of Asia, Bangalore, Karnataka 560037" },
-    { region: "Samsung Experience Store - Touch Tech Telecom - Electronic City", address: "Electronic City, Bangalore, Karnataka 560100" },
-    { region: "Samsung Experience Store - IT World - Lulu Mall", address: "Lulu Mall, Bangalore, Karnataka 560068" },
-    { region: "Samsung Experience Store - Concepts Inc - Indiranagar", address: "Indiranagar, Bangalore, Karnataka 560038" },
-    { region: "Samsung Experience Store - UB City Bengaluru", address: "UB City Mall, Bangalore, Karnataka 560001" },
-    { region: "Experience Store - Samsung Opera House", address: "Opera House, Bangalore, Karnataka 560002" }
+    { region: "Samsung Experience Store - Concepts Inc - Marathalli (23rd and 24th November 2024)", address: "Marathalli, Bangalore, Karnataka 560037" },
+    { region: "Samsung Experience Store - Mall of Asia Bengaluru (23rd and 24th November 2024)", address: "Mall of Asia, Bangalore, Karnataka 560037" },
+    { region: "Samsung Experience Store - Touch Tech Telecom - Electronic City (30th Nov and 1st Dec 2024)", address: "Electronic City, Bangalore, Karnataka 560100" },
+    { region: "Samsung Experience Store - IT World - Lulu Mall (30th Nov and 1st Dec 2024)", address: "Lulu Mall, Bangalore, Karnataka 560068" },
+    { region: "Samsung Experience Store - Concepts Inc - Indiranagar (16th and 17th November 2024)", address: "Indiranagar, Bangalore, Karnataka 560038" },
+    { region: "Samsung Experience Store - UB City Bengaluru (16th and 17th November 2024)", address: "UB City Mall, Bangalore, Karnataka 560001" },
+    { region: "Experience Store - Samsung Opera House (16th and 17th November 2024)", address: "Opera House, Bangalore, Karnataka 560002" }
   ],
   Hyderabad: [
-    { region: "Samsung Experience Store - Inorbit Mall Hyderabad", address: "Inorbit Mall, Hyderabad, Telangana 500081" },
-    { region: "Samsung Experience Store - Vasisht Retail - Madhapur", address: "Madhapur, Hyderabad, Telangana 500081" },
-    { region: "Samsung Experience Store - Premium Lifestyle India Pvt Ltd - Kondapur", address: "Kondapur, Hyderabad, Telangana 500084" },
-    { region: "Samsung Experience Store - S.S. Communications - Himayat Nagar", address: "Himayat Nagar, Hyderabad, Telangana 500029" }
+    { region: "Samsung Experience Store - Inorbit Mall Hyderabad (23rd and 24th November 2024)", address: "Inorbit Mall, Hyderabad, Telangana 500081" },
+    { region: "Samsung Experience Store - Vasisht Retail - Madhapur (23rd and 24th November 2024)", address: "Madhapur, Hyderabad, Telangana 500081" },
+    { region: "Samsung Experience Store - Premium Lifestyle India Pvt Ltd - Kondapur (30th Nov and 1st Dec 2024)", address: "Kondapur, Hyderabad, Telangana 500084" },
+    { region: "Samsung Experience Store - S.S. Communications - Himayat Nagar (7th and 8th December 2024)", address: "Himayat Nagar, Hyderabad, Telangana 500029" }
   ],
   Secunderabad: [
-    { region: "Samsung Experience Store - IT World - DSL Virtue Mall", address: "DSL Virtue Mall, Secunderabad, Telangana 500003" }
+    { region: "Samsung Experience Store - IT World - DSL Virtue Mall (7th and 8th December 2024)", address: "DSL Virtue Mall, Secunderabad, Telangana 500003" }
   ],
   Chennai: [
-    { region: "Samsung Experience Store - Phoenix MarketCity Chennai", address: "Phoenix MarketCity, Chennai, Tamil Nadu 600042" }
+    { region: "Samsung Experience Store - Phoenix MarketCity Chennai (23rd and 24th November 2024)", address: "Phoenix MarketCity, Chennai, Tamil Nadu 600042" }
   ],
   Mohali: [
-    { region: "Samsung Experience Store - CP67 Mohali", address: "CP67 Mall, Mohali, Punjab 160062" }
+    { region: "Samsung Experience Store - CP67 Mohali (30th Nov and 1st Dec 2024)", address: "CP67 Mall, Mohali, Punjab 160062" }
   ],
   Chandigarh: [
-    { region: "Samsung Experience Store - Elante Mall Chandigarh", address: "Elante Mall, Chandigarh, Punjab 160002" },
-    { region: "Samsung Experience Store - Electro Photo Equipments Pvt Ltd - Sector 35 C", address: "Sector 35 C, Chandigarh, Punjab 160022" },
-    { region: "Samsung Experience Store - Electrophoto Equipments Private Limited - Sector 22", address: "Sector 22, Chandigarh, Punjab 160022" }
+    { region: "Samsung Experience Store - Elante Mall Chandigarh (30th Nov and 1st Dec 2024)", address: "Elante Mall, Chandigarh, Punjab 160002" },
+    { region: "Samsung Experience Store - Electro Photo Equipments Pvt Ltd - Sector 35 C (7th and 8th December 2024)", address: "Sector 35 C, Chandigarh, Punjab 160022" },
+    { region: "Samsung Experience Store - Electrophoto Equipments Private Limited - Sector 22 (7th and 8th December 2024)", address: "Sector 22, Chandigarh, Punjab 160022" }
   ],
   Kolkata: [
-    { region: "Samsung Experience Store - Park Street Kolkata", address: "Park Street, Kolkata, West Bengal 700016" },
-    { region: "Samsung Experience Store - R G Networks - South City Mall", address: "South City Mall, Kolkata, West Bengal 700068" }
+    { region: "Samsung Experience Store - Park Street Kolkata (30th Nov and 1st Dec 2024)", address: "Park Street, Kolkata, West Bengal 700016" },
+    { region: "Samsung Experience Store - R G Networks - South City Mall (7th and 8th December 2024)", address: "South City Mall, Kolkata, West Bengal 700068" }
   ],
   Ahmedabad: [
-    { region: "Samsung Experience Store - Techno Ventures - Maninagar", address: "Maninagar, Ahmedabad, Gujarat 380008" },
-    { region: "Samsung Experience Store - Palladium Ahmedabad", address: "Palladium Mall, Ahmedabad, Gujarat 380054" },
-    { region: "Samsung Experience Store - Techno Ventures - Prahlad Nagar Road", address: "Prahlad Nagar Road, Ahmedabad, Gujarat 380015" }
+    { region: "Samsung Experience Store - Techno Ventures - Maninagar (30th Nov and 1st Dec 2024)", address: "Maninagar, Ahmedabad, Gujarat 380008" },
+    { region: "Samsung Experience Store - Palladium Ahmedabad (7th and 8th December 2024)", address: "Palladium Mall, Ahmedabad, Gujarat 380054" }
   ],
   Surat: [
-    { region: "Samsung Experience Store - Shivam Sales - Adajan", address: "Adajan, Surat, Gujarat 395009" },
-    { region: "Samsung Experience Store - IBC Surat", address: "IBC Mall, Surat, Gujarat 395007" }
+    { region: "Samsung Experience Store - Shivam Sales - Adajan (30th Nov and 1st Dec 2024)", address: "Adajan, Surat, Gujarat 395009" },
+    { region: "Samsung Experience Store - IBC Surat (16th and 17th November 2024)", address: "IBC Mall, Surat, Gujarat 395007" }
   ],
   Trivandrum: [
-    { region: "Samsung Experience Store - Lulu Mall Trivandrum", address: "Lulu Mall, Trivandrum, Kerala 695029" }
+    { region: "Samsung Experience Store - Lulu Mall Trivandrum (7th and 8th December 2024)", address: "Lulu Mall, Trivandrum, Kerala 695029" }
   ]
 };
+
 
 
 
@@ -176,14 +176,20 @@ const Ranking = () => {
           <div className="w-full md:w-2/3 dropdown-container relative">
             <button
               onClick={() => setCityOpen(!isCityOpen)}
-              className="w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500 flex justify-between items-center"
+              className="w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none  flex justify-between items-center"
             >
               <span>{region || "Select Your City"}</span>
-              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isCityOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isCityOpen ? 'rotate-180' : ''}`}  />
             </button>
 
             {isCityOpen && (
-              <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
+              <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50 " style={{ 
+                msOverflowStyle: 'none',
+                scrollbarWidth: 'none',
+                '::-webkit-scrollbar': {
+                  display: 'none'
+                }
+              }}>
                 {Object.keys(locations).map(city => (
                   <div
                     key={city}
@@ -202,14 +208,20 @@ const Ranking = () => {
             <button
               onClick={() => region && setRegionOpen(!isRegionOpen)}
               disabled={!region}
-              className={`w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500 flex justify-between items-center ${!region && 'opacity-50 cursor-not-allowed'}`}
+              className={`w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base  flex justify-between items-center ${!region && 'opacity-50 cursor-not-allowed'}`}
             >
               <span>{store || "Select Your Region"}</span>
               <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isRegionOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {isRegionOpen && region && (
-              <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
+              <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50"  style={{ 
+                msOverflowStyle: 'none',
+                scrollbarWidth: 'none',
+                '::-webkit-scrollbar': {
+                  display: 'none'
+                }
+              }}>
                 {locations[region].map(({ region: storeRegion }) => (
                   <div
                     key={storeRegion}

@@ -48,13 +48,16 @@ function HomePage() {
       {/* Description */}
       <p className="text-white max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
       We are thrilled to introduce an exclusive gaming experience at Samsung Experience Stores, featuring our flagship devices—the Galaxy Z Fold6 and Galaxy S24 FE—crafted to elevate mobile gaming to new heights. This month-long event invites everyone to dive in, explore, and be part of a truly immersive adventure.
+          {/* We’re excited to unveil a brand-new gaming experience exclusively at Samsung Experience Stores, featuring our flagship devices, The Galaxy Z Fold6 and Galaxy S24FE—designed to elevate every gamer’s journey. This month-long event invites gaming enthusiasts to step up, compete, and embrace the thrill of the challenge every weekend! */}
         </p>
-        {/* <p className="text-white max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
-          Running across 51 stores in 19 cities from November 9th to December 1st, #PlayGalaxy offers countless chances to join the action. Each store will feature a Leaderboard Stand that tracks participants' lap times, highlighting the day's top competitors. Every day, the top 3 fastest players at each store will get exciting prizes, and everyone who joins will receive a certificate and exclusive goodies as a thank you for their participation!
-        </p> */}
         <p className="text-white max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
         From November 16th to December 8th, #PlayGalaxy will come alive across 51 Samsung Experience Stores in 19 cities, offering countless opportunities to jump into the action. Come and join us on a journey designed to explore the thrill and excitement of gaming with our hero devices!
+
         </p>
+        {/* <p className="text-white max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
+          For an even larger audience, our Top 5 premium stores will live-stream the gaming challenges on YouTube, allowing players to showcase their skills and compete in front of viewers nationwide.
+
+        </p> */}
         <p className="text-white max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg mt-0 text-center">
         Get ready to play, discover, and connect with the power of #PlayGalaxy #SamsungExperienceStores
         </p>

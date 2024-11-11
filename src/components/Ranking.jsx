@@ -212,7 +212,7 @@ const Ranking = () => {
               disabled={!region}
               className={`w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base  flex justify-between items-center ${!region && 'opacity-50 cursor-not-allowed'}`}
             >
-              <span>{store || "Select Your Region"}</span>
+              <span>{store || "Select Your Samsung Experience Store"}</span>
               <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isRegionOpen ? 'rotate-180' : ''}`} />
             </button>
 

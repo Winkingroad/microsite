@@ -7,91 +7,93 @@ import { format } from 'date-fns';
 
 const locations = {
   Delhi: [
-    { region: "Samsung Experience Store - Star Mobitel Ltd South Ex - South Extension", address: "South Extension, New Delhi, Delhi 110049" },
-    { region: "Samsung Experience Store - Ambience Vasant Kunj", address: "Ambience Mall, Vasant Kunj, New Delhi, Delhi 110070" },
-    { region: "Samsung Experience Store - Aidhi Projects Pvt Ltd - Rajouri Garden", address: "Rajouri Garden, New Delhi, Delhi 110027" },
-    { region: "Samsung Experience Store - Metro Mobiles - Paschim Vihar", address: "Paschim Vihar, New Delhi, Delhi 110063" },
-    { region: "Samsung Experience Store - Connaught Place", address: "Connaught Place, New Delhi, Delhi 110001" },
-    { region: "Samsung Experience Store - Select Citywalk Saket", address: "Select Citywalk Mall, Saket, New Delhi, Delhi 110017" }
+    { region: "Select Citywalk Saket" },
+    { region: "Aidhi Projects Pvt Ltd, Rajouri Garden" },
+    { region: "Metro Mobiles, Paschim Vihar" },
+    { region: "Connaught Place" },
+    { region: "Star Mobitel Ltd, South Extension" },
+    { region: "Ambience Vasant Kunj" }
   ],
   Gurgaon: [
-    { region: "Samsung Experience Store - Spectra & Star Convergence Limited - Ambience Mall", address: "Ambience Mall, Gurgaon, Haryana 122002" },
-    { region: "Samsung Experience Store - Cyberhub", address: "Cyberhub, DLF Cyber City, Gurgaon, Haryana 122002" }
+    { region: "Spectra & Star Convergence Limited, Ambience Mall" },
+    { region: "Spectra And Star Convergence Limited, Ardee Mall" },
+    { region: "Cyberhub" }
   ],
   Noida: [
-    { region: "Samsung Experience Store - Agmatel India Pvt. Ltd. - DLF Mall of India", address: "DLF Mall of India, Sector 18, Noida, Uttar Pradesh 201301" },
-    { region: "Samsung Experience Store - Tech Mart - Sector 18", address: "Sector 18, Noida, Uttar Pradesh 201301" },
-    { region: "Samsung Experience Store - Device Mart Private Limited - Sector 18", address: "Sector 18, Noida, Uttar Pradesh 201301" }
-  ],
-  Dehradun: [
-    { region: "Samsung Experience Store - Arora Enterprises - Old Connaught Place", address: "Old Connaught Place, Dehradun, Uttarakhand 248001" },
-    { region: "Samsung Experience Store - Pacific Mall Dehradun", address: "Pacific Mall, Dehradun, Uttarakhand 248001" }
-  ],
-  Lucknow: [
-    { region: "Samsung Experience Store - Lulu Mall Lucknow", address: "Lulu Mall, Lucknow, Uttar Pradesh 226010" }
-  ],
-  Mumbai: [
-    { region: "Samsung Experience Store - Retail Shop - Lower Parel", address: "Lower Parel, Mumbai, Maharashtra 400013" },
-    { region: "Samsung Experience Store - Ssk Retails Pvt Ltd - Phoenix Market City Mall", address: "Phoenix Market City Mall, Mumbai, Maharashtra 400070" }
-  ],
-  Virar: [
-    { region: "Samsung Experience Store - Infiniti Telecom - Virar West", address: "Virar West, Virar, Maharashtra 401303" }
-  ],
-  NaviMumbai: [
-    { region: "Samsung Experience Store - Breathe Enterprises - Koparkhairane", address: "Koparkhairane, Navi Mumbai, Maharashtra 400709" }
-  ],
-  Pune: [
-    { region: "Samsung Experience Store - Karuna Management Services Limited - Viman Nagar", address: "Viman Nagar, Pune, Maharashtra 411014" },
-    { region: "Samsung Experience Store - Tech Star Retail - Seasons Mall", address: "Seasons Mall, Pune, Maharashtra 411028" },
-    { region: "Samsung Experience Store - Navkar Communication - Bibvewadi", address: "Bibvewadi, Pune, Maharashtra 411037" },
-    { region: "Samsung Experience Store - Mall of Millennium Pune", address: "Mall of Millennium, Pune, Maharashtra 411045" },
-    { region: "Samsung Experience Store - Ssk Retails Pvt Ltd - Jangli Maharaj Road", address: "Jangli Maharaj Road, Pune, Maharashtra 411005" }
-  ],
-  Bangalore: [
-    { region: "Samsung Experience Store - Concepts Inc - Marathalli", address: "Marathalli, Bangalore, Karnataka 560037" },
-    { region: "Samsung Experience Store - Mall of Asia Bengaluru", address: "Mall of Asia, Bangalore, Karnataka 560037" },
-    { region: "Samsung Experience Store - Touch Tech Telecom - Electronic City", address: "Electronic City, Bangalore, Karnataka 560100" },
-    { region: "Samsung Experience Store - IT World - Lulu Mall", address: "Lulu Mall, Bangalore, Karnataka 560068" },
-    { region: "Samsung Experience Store - Concepts Inc - Indiranagar", address: "Indiranagar, Bangalore, Karnataka 560038" },
-    { region: "Samsung Experience Store - UB City Bengaluru", address: "UB City Mall, Bangalore, Karnataka 560001" },
-    { region: "Experience Store - Samsung Opera House", address: "Opera House, Bangalore, Karnataka 560002" }
-  ],
-  Hyderabad: [
-    { region: "Samsung Experience Store - Inorbit Mall Hyderabad", address: "Inorbit Mall, Hyderabad, Telangana 500081" },
-    { region: "Samsung Experience Store - Vasisht Retail - Madhapur", address: "Madhapur, Hyderabad, Telangana 500081" },
-    { region: "Samsung Experience Store - Premium Lifestyle India Pvt Ltd - Kondapur", address: "Kondapur, Hyderabad, Telangana 500084" },
-    { region: "Samsung Experience Store - S.S. Communications - Himayat Nagar", address: "Himayat Nagar, Hyderabad, Telangana 500029" }
-  ],
-  Secunderabad: [
-    { region: "Samsung Experience Store - IT World - DSL Virtue Mall", address: "DSL Virtue Mall, Secunderabad, Telangana 500003" }
-  ],
-  Chennai: [
-    { region: "Samsung Experience Store - Phoenix MarketCity Chennai", address: "Phoenix MarketCity, Chennai, Tamil Nadu 600042" }
-  ],
-  Mohali: [
-    { region: "Samsung Experience Store - CP67 Mohali", address: "CP67 Mall, Mohali, Punjab 160062" }
-  ],
-  Chandigarh: [
-    { region: "Samsung Experience Store - Elante Mall Chandigarh", address: "Elante Mall, Chandigarh, Punjab 160002" },
-    { region: "Samsung Experience Store - Electro Photo Equipments Pvt Ltd - Sector 35 C", address: "Sector 35 C, Chandigarh, Punjab 160022" },
-    { region: "Samsung Experience Store - Electrophoto Equipments Private Limited - Sector 22", address: "Sector 22, Chandigarh, Punjab 160022" }
-  ],
-  Kolkata: [
-    { region: "Samsung Experience Store - Park Street Kolkata", address: "Park Street, Kolkata, West Bengal 700016" },
-    { region: "Samsung Experience Store - R G Networks - South City Mall", address: "South City Mall, Kolkata, West Bengal 700068" }
+    { region: "Agmatel India Pvt.Ltd, DLF Mall of India" },
+    { region: "Tech Mart, Sector 18" },
+    { region: "Device Mart Private Limited, Sector 18" }
   ],
   Ahmedabad: [
-    { region: "Samsung Experience Store - Techno Ventures - Maninagar", address: "Maninagar, Ahmedabad, Gujarat 380008" },
-    { region: "Samsung Experience Store - Palladium Ahmedabad", address: "Palladium Mall, Ahmedabad, Gujarat 380054" },
-    { region: "Samsung Experience Store - Techno Ventures - Prahlad Nagar Road", address: "Prahlad Nagar Road, Ahmedabad, Gujarat 380015" }
+    { region: "Techno Ventures, Prahlad Nagar Road" },
+    { region: "Techno Ventures, Maninagar" },
+    { region: "Palladium Ahmedabad" }
   ],
   Surat: [
-    { region: "Samsung Experience Store - Shivam Sales - Adajan", address: "Adajan, Surat, Gujarat 395009" },
-    { region: "Samsung Experience Store - IBC Surat", address: "IBC Mall, Surat, Gujarat 395007" }
+    { region: "IBC Surat" },
+    { region: "Shivam Sales, Adajan" }
+  ],
+  Mumbai: [
+    { region: "Ssk Retails Pvt Ltd, Phoenix Market City Mall" },
+    { region: "Retail Shop, Lower Parel" }
+  ],
+  NaviMumbai: [
+    { region: "Breathe Enterprises, Koparkhairane" }
+  ],
+  Pune: [
+    { region: "Mall of Millennium Pune" },
+    { region: "Karuna Management Services Limited, Viman Nagar" },
+    { region: "Tech Star Retail, Seasons Mall" },
+    { region: "Navkar Communication, Bibvewadi" },
+    { region: "Ssk Retails Pvt Ltd, Jangli Maharaj Road" }
+  ],
+  Bangalore: [
+    { region: "Concepts Inc, Indiranagar" },
+    { region: "Samsung Opera House" },
+    { region: "UB City Bengaluru" },
+    { region: "Concepts Inc, Marathalli" },
+    { region: "Mall of Asia Bengaluru" },
+    { region: "Touch Tech Telecom, Electronic City" },
+    { region: "IT World, Lulu Mall" },
+    { region: "Jfk Trust, Whitefield" }
+  ],
+  Hyderabad: [
+    { region: "Inorbit Mall Hyderabad" },
+    { region: "Vasisht Retail, Madhapur" },
+    { region: "Premium Lifestyle India Pvt Ltd, Kondapur" },
+    { region: "S.S. Communications, Himayat Nagar" }
+  ],
+  Secunderabad: [
+    { region: "IT World, DSL Virtue Mall" }
+  ],
+  Chennai: [
+    { region: "Phoenix MarketCity, Chennai" }
+  ],
+  Lucknow: [
+    { region: "Lulu Mall Lucknow" }
+  ],
+  Virar: [
+    { region: "Infiniti Telecom, Virar West" }
+  ],
+  Mohali: [
+    { region: "CP67 Mohali" }
+  ],
+  Chandigarh: [
+    { region: "Elante Mall, Chandigarh" },
+    { region: "Electro Photo Equipments Pvt Ltd, Sector 35 C" },
+    { region: "Electrophoto Equipments Private Limited, Sector 22" }
+  ],
+  Dehradun: [
+    { region: "Arora Enterprises, Old Connaught Place" },
+    { region: "Pacific Mall Dehradun" }
+  ],
+  Kolkata: [
+    { region: "Park Street, Kolkata" },
+    { region: "R G Networks, South City Mall" }
   ],
   Trivandrum: [
-    { region: "Samsung Experience Store - Lulu Mall Trivandrum", address: "Lulu Mall, Trivandrum, Kerala 695029" }
-  ]
+    { region: "Lulu Mall Trivandrum" }
+  ] 
 };
 
 

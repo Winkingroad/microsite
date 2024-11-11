@@ -45,6 +45,7 @@ const locations = {
   ],
   Bangalore: [
     { region: "Concepts Inc, Indiranagar (16th & 17th Nov)" },
+    { region: "Samsung Opera House (16th & 17th Nov)" },
     { region: "UB City Bengaluru (16th & 17th Nov)" },
     { region: "Concepts Inc, Marathalli (23rd & 24th Nov)" },
     { region: "Mall of Asia Bengaluru (23rd & 24th Nov)" },
@@ -80,7 +81,7 @@ const locations = {
   ],
   Dehradun: [
     { region: "Arora Enterprises, Old Connaught Place (23rd & 24th Nov)" },
-    { region: "Arora Enterprises, Old Connaught Place (30th Nov & 1st Dec)" },
+    { region: "Arora Enterprises, Chakarata Road (30th Nov & 1st Dec)" },
     { region: "Pacific Mall Dehradun (7th & 8th Dec)" }
   ],
   Kolkata: [

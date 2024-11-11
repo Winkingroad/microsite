@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import { ChevronDown } from 'lucide-react';
+import Calendar from '../assets/calendar.png'
 
 const locations = {
   Delhi: [
@@ -92,7 +95,10 @@ const locations = {
 
 
 
+
+
 const Ranking = () => {
+  const datePickerRef = useRef(null); 
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [region, setRegion] = useState('');
@@ -163,6 +169,9 @@ const Ranking = () => {
     };
   }, []);
 
+  
+    
+  
   return (
     <div className="min-h-screen p-2 sm:p-4 md:p-8 text-white w-full bg-main-bg bg-cover bg-center">
       <div className="max-w-7xl mx-auto bg-transparent rounded shadow-md mb-4 md:mb-6">
@@ -237,16 +246,23 @@ const Ranking = () => {
           </div>
 
           {/* Date Input */}
-          <div className="w-full md:w-2/3">
-            <input
-              placeholder='Select the date'
-              onfocus="(this.type='date')"
-              type="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-              className="w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          <div
+      className="w-full md:w-2/3"
+      onClick={() => datePickerRef.current.setOpen(true)} // Open calendar on div click
+    >
+      <div className="flex flex-row items-center justify-between w-full cursor-pointer bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-white">
+        <DatePicker
+          ref={datePickerRef} // Attach the ref to DatePicker
+          selected={date}
+          onChange={(date) => setDate(date)}
+          placeholderText="Select the Date"
+          dateFormat="yyyy-MM-dd"
+          className="cursor-pointer w-full bg-gray-900 text-white rounded-lg text-base focus:outline-none placeholder-white"
+        />
+        <img src={Calendar} className="h-6 w-6" alt="Calendar Icon" />
+      </div>
+    </div>
+
           
         </div>
 

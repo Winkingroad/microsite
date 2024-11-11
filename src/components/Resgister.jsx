@@ -3,89 +3,50 @@ import arrow from '../assets/rightarrow.png';
 
 const locations = {
   Delhi: [
-    { region: "Samsung Experience Store - Star Mobitel Ltd South Ex - South Extension (7th and 8th December 2024)", address: "South Extension, New Delhi, Delhi 110049" },
-    { region: "Samsung Experience Store - Ambience Vasant Kunj (7th and 8th December 2024)", address: "Ambience Mall, Vasant Kunj, New Delhi, Delhi 110070" },
-    { region: "Samsung Experience Store - Aidhi Projects Pvt Ltd - Rajouri Garden (23rd and 24th November 2024)", address: "Rajouri Garden, New Delhi, Delhi 110027" },
-    { region: "Samsung Experience Store - Metro Mobiles - Paschim Vihar (30th Nov and 1st Dec 2024)", address: "Paschim Vihar, New Delhi, Delhi 110063" },
-    { region: "Samsung Experience Store - Connaught Place (30th Nov and 1st Dec 2024)", address: "Connaught Place, New Delhi, Delhi 110001" },
-    { region: "Samsung Experience Store - Select Citywalk Saket (16th and 17th November 2024)", address: "Select Citywalk Mall, Saket, New Delhi, Delhi 110017" }
+    { region: "Select Citywalk Saket (16th & 17th Nov)" },
+    { region: "Aidhi Projects Pvt Ltd, Rajouri Garden (23rd & 24th Nov)" }
   ],
   Gurgaon: [
-    { region: "Samsung Experience Store - Spectra & Star Convergence Limited - Ambience Mall (16th and 17th November 2024)", address: "Ambience Mall, Gurgaon, Haryana 122002" },
-    { region: "Samsung Experience Store - Cyberhub (30th Nov and 1st Dec 2024)", address: "Cyberhub, DLF Cyber City, Gurgaon, Haryana 122002" }
-  ],
-  Noida: [
-    { region: "Samsung Experience Store - Agmatel India Pvt. Ltd. - DLF Mall of India (23rd and 24th November 2024)", address: "DLF Mall of India, Sector 18, Noida, Uttar Pradesh 201301" },
-    { region: "Samsung Experience Store - Tech Mart - Sector 18 (7th and 8th December 2024)", address: "Sector 18, Noida, Uttar Pradesh 201301" },
-    { region: "Samsung Experience Store - Device Mart Private Limited - Sector 18 (7th and 8th December 2024)", address: "Sector 18, Noida, Uttar Pradesh 201301" }
-  ],
-  Dehradun: [
-    { region: "Samsung Experience Store - Arora Enterprises - Old Connaught Place (23rd and 24th November 2024)", address: "Old Connaught Place, Dehradun, Uttarakhand 248001" },
-    { region: "Samsung Experience Store - Pacific Mall Dehradun (7th and 8th December 2024)", address: "Pacific Mall, Dehradun, Uttarakhand 248001" }
-  ],
-  Lucknow: [
-    { region: "Samsung Experience Store - Lulu Mall Lucknow (23rd and 24th November 2024)", address: "Lulu Mall, Lucknow, Uttar Pradesh 226010" }
-  ],
-  Mumbai: [
-    { region: "Samsung Experience Store - Retail Shop - Lower Parel (23rd and 24th November 2024)", address: "Lower Parel, Mumbai, Maharashtra 400013" },
-    { region: "Samsung Experience Store - Ssk Retails Pvt Ltd - Phoenix Market City Mall (16th and 17th November 2024)", address: "Phoenix Market City Mall, Mumbai, Maharashtra 400070" }
-  ],
-  Virar: [
-    { region: "Samsung Experience Store - Infiniti Telecom - Virar West (23rd and 24th November 2024)", address: "Virar West, Virar, Maharashtra 401303" }
-  ],
-  NaviMumbai: [
-    { region: "Samsung Experience Store - Breathe Enterprises - Koparkhairane (16th and 17th November 2024)", address: "Koparkhairane, Navi Mumbai, Maharashtra 400709" }
-  ],
-  Pune: [
-    { region: "Samsung Experience Store - Karuna Management Services Limited - Viman Nagar (23rd and 24th November 2024)", address: "Viman Nagar, Pune, Maharashtra 411014" },
-    { region: "Samsung Experience Store - Tech Star Retail - Seasons Mall (23rd and 24th November 2024)", address: "Seasons Mall, Pune, Maharashtra 411028" },
-    { region: "Samsung Experience Store - Navkar Communication - Bibvewadi (30th Nov and 1st Dec 2024)", address: "Bibvewadi, Pune, Maharashtra 411037" },
-    { region: "Samsung Experience Store - Mall of Millennium Pune (16th and 17th November 2024)", address: "Mall of Millennium, Pune, Maharashtra 411045" },
-    { region: "Samsung Experience Store - Ssk Retails Pvt Ltd - Jangli Maharaj Road (7th and 8th December 2024)", address: "Jangli Maharaj Road, Pune, Maharashtra 411005" }
-  ],
-  Bangalore: [
-    { region: "Samsung Experience Store - Concepts Inc - Marathalli (23rd and 24th November 2024)", address: "Marathalli, Bangalore, Karnataka 560037" },
-    { region: "Samsung Experience Store - Mall of Asia Bengaluru (23rd and 24th November 2024)", address: "Mall of Asia, Bangalore, Karnataka 560037" },
-    { region: "Samsung Experience Store - Touch Tech Telecom - Electronic City (30th Nov and 1st Dec 2024)", address: "Electronic City, Bangalore, Karnataka 560100" },
-    { region: "Samsung Experience Store - IT World - Lulu Mall (30th Nov and 1st Dec 2024)", address: "Lulu Mall, Bangalore, Karnataka 560068" },
-    { region: "Samsung Experience Store - Concepts Inc - Indiranagar (16th and 17th November 2024)", address: "Indiranagar, Bangalore, Karnataka 560038" },
-    { region: "Samsung Experience Store - UB City Bengaluru (16th and 17th November 2024)", address: "UB City Mall, Bangalore, Karnataka 560001" },
-    { region: "Experience Store - Samsung Opera House (16th and 17th November 2024)", address: "Opera House, Bangalore, Karnataka 560002" }
-  ],
-  Hyderabad: [
-    { region: "Samsung Experience Store - Inorbit Mall Hyderabad (23rd and 24th November 2024)", address: "Inorbit Mall, Hyderabad, Telangana 500081" },
-    { region: "Samsung Experience Store - Vasisht Retail - Madhapur (23rd and 24th November 2024)", address: "Madhapur, Hyderabad, Telangana 500081" },
-    { region: "Samsung Experience Store - Premium Lifestyle India Pvt Ltd - Kondapur (30th Nov and 1st Dec 2024)", address: "Kondapur, Hyderabad, Telangana 500084" },
-    { region: "Samsung Experience Store - S.S. Communications - Himayat Nagar (7th and 8th December 2024)", address: "Himayat Nagar, Hyderabad, Telangana 500029" }
-  ],
-  Secunderabad: [
-    { region: "Samsung Experience Store - IT World - DSL Virtue Mall (7th and 8th December 2024)", address: "DSL Virtue Mall, Secunderabad, Telangana 500003" }
-  ],
-  Chennai: [
-    { region: "Samsung Experience Store - Phoenix MarketCity Chennai (23rd and 24th November 2024)", address: "Phoenix MarketCity, Chennai, Tamil Nadu 600042" }
-  ],
-  Mohali: [
-    { region: "Samsung Experience Store - CP67 Mohali (30th Nov and 1st Dec 2024)", address: "CP67 Mall, Mohali, Punjab 160062" }
-  ],
-  Chandigarh: [
-    { region: "Samsung Experience Store - Elante Mall Chandigarh (30th Nov and 1st Dec 2024)", address: "Elante Mall, Chandigarh, Punjab 160002" },
-    { region: "Samsung Experience Store - Electro Photo Equipments Pvt Ltd - Sector 35 C (7th and 8th December 2024)", address: "Sector 35 C, Chandigarh, Punjab 160022" },
-    { region: "Samsung Experience Store - Electrophoto Equipments Private Limited - Sector 22 (7th and 8th December 2024)", address: "Sector 22, Chandigarh, Punjab 160022" }
-  ],
-  Kolkata: [
-    { region: "Samsung Experience Store - Park Street Kolkata (30th Nov and 1st Dec 2024)", address: "Park Street, Kolkata, West Bengal 700016" },
-    { region: "Samsung Experience Store - R G Networks - South City Mall (7th and 8th December 2024)", address: "South City Mall, Kolkata, West Bengal 700068" }
+    { region: "Spectra & Star Convergence Limited, Ambience Mall (16th & 17th Nov)" },
+    { region: "Spectra And Star Convergence Limited, Ardee Mall (23rd & 24th Nov)" }
   ],
   Ahmedabad: [
-    { region: "Samsung Experience Store - Techno Ventures - Maninagar (30th Nov and 1st Dec 2024)", address: "Maninagar, Ahmedabad, Gujarat 380008" },
-    { region: "Samsung Experience Store - Palladium Ahmedabad (7th and 8th December 2024)", address: "Palladium Mall, Ahmedabad, Gujarat 380054" }
+    { region: "Techno Ventures, Prahlad Nagar Road (16th & 17th Nov)" }
   ],
   Surat: [
-    { region: "Samsung Experience Store - Shivam Sales - Adajan (30th Nov and 1st Dec 2024)", address: "Adajan, Surat, Gujarat 395009" },
-    { region: "Samsung Experience Store - IBC Surat (16th and 17th November 2024)", address: "IBC Mall, Surat, Gujarat 395007" }
+    { region: "IBC Surat (16th & 17th Nov)" }
   ],
-  Trivandrum: [
-    { region: "Samsung Experience Store - Lulu Mall Trivandrum (7th and 8th December 2024)", address: "Lulu Mall, Trivandrum, Kerala 695029" }
+  Mumbai: [
+    { region: "Ssk Retails Pvt Ltd, Phoenix Market City Mall (16th & 17th Nov)" },
+    { region: "Retail Shop, Lower Parel (23rd & 24th Nov)" }
+  ],
+  NaviMumbai: [
+    { region: "Breathe Enterprises, Koparkhairane (16th & 17th Nov)" }
+  ],
+  Pune: [
+    { region: "Mall of Millennium Pune (16th & 17th Nov)" },
+    { region: "Karuna Management Services Limited, Viman Nagar (23rd & 24th Nov)" },
+    { region: "Tech Star Retail, Seasons Mall (23rd & 24th Nov)" }
+  ],
+  Bangalore: [
+    { region: "Concepts Inc, Indiranagar (16th & 17th Nov)" },
+    { region: "UB City Bengaluru (16th & 17th Nov)" },
+    { region: "Samsung Opera House (16th & 17th Nov)" },
+    { region: "Concepts Inc, Marathalli (23rd & 24th Nov)" },
+    { region: "Mall of Asia Bengaluru (23rd & 24th Nov)" }
+  ],
+  Hyderabad: [
+    { region: "Inorbit Mall Hyderabad (23rd & 24th Nov)" },
+    { region: "Vasisht Retail, Madhapur (23rd & 24th Nov)" }
+  ],
+  Chennai: [
+    { region: "Phoenix MarketCity, Chennai (23rd & 24th Nov)" }
+  ],
+  Lucknow: [
+    { region: "Lulu Mall Lucknow (23rd & 24th Nov)" }
+  ],
+  Virar: [
+    { region: "Infiniti Telecom, Virar West (23rd & 24th Nov)" }
   ]
 };
 

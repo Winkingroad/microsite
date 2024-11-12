@@ -206,7 +206,7 @@ const Register = () => {
               className="w-full px-3 md:px-4 py-3 md:py-4 bg-gray-700 bg-opacity-50 text-white placeholder-gray-100 focus:outline-none text-lg md:text-xl font-bold md:font-extrabold rounded-lg"
               required
             >
-              <option value="" className='bg-[#0a202b]'>Select Region</option>
+              <option value="" className='bg-[#0a202b]'>Select Your City</option>
               {Object.keys(locations).map((city) => (
                 <option key={city} className='bg-[#0a202b]' value={city}>{city}</option>
               ))}

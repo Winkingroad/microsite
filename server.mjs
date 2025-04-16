@@ -10,10 +10,11 @@ const apiKey = process.env.API_KEY;
 
 if (!sheetId || !apiKey) {
   console.error("Missing SHEET_ID or API_KEY environment variable");
-  process.exit(1); // Exit if necessary environment variables are not set
+  process.exit(1);
 }
 
-const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A:E?key=${apiKey}`;
+// ✅ Extend the range to include column F (i.e., Sets column)
+const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A:F?key=${apiKey}`;
 
 const lapTimeToSeconds = (lapTime) => {
   const [hours, minutes, seconds] = lapTime.split(':').map(Number);
@@ -31,6 +32,7 @@ const fetchSheetData = async () => {
         Store: row[2],
         LapTime: row[3],
         Date: row[4],
+        Sets: row[5] || '', // ✅ Fetch Sets value, defaulting to empty if undefined
         LapTimeInSeconds: lapTimeToSeconds(row[3])
       }));
 
@@ -41,6 +43,7 @@ const fetchSheetData = async () => {
         Region: entry.Region,
         Store: entry.Store,
         LapTime: entry.LapTime,
+        Sets: entry.Sets, // ✅ Include Sets in final output
         Date: entry.Date
       }));
     }
@@ -64,14 +67,13 @@ const updateLeaderboard = async () => {
   });
 };
 
-// Initial update and interval for periodic updates
 updateLeaderboard();
 setInterval(updateLeaderboard, 6000);
 
 const wss = new WebSocketServer({ port: PORT });
 
 wss.on('connection', ws => {
-  ws.send(JSON.stringify(leaderboardData)); // Send the latest leaderboard to new clients
+  ws.send(JSON.stringify(leaderboardData));
   ws.on('error', error => console.error('WebSocket error:', error));
 });
 

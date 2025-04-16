@@ -3,120 +3,60 @@ import arrow from '../assets/rightarrow.png';
 
 const locations = {
   Delhi: [
-    { region: "Select Citywalk Saket (16th & 17th Nov)" },
-    { region: "Aidhi Projects Pvt Ltd, Rajouri Garden (23rd & 24th Nov)" },
-    { region: "Metro Mobiles, Paschim Vihar (30th Nov & 1st Dec)" },
-    { region: "Connaught Place (30th Nov & 1st Dec)" },
-    { region: "Star Mobitel Ltd, South Extension (7th & 8th Dec)" },
-    { region: "Ambience Vasant Kunj (7th & 8th Dec)" },
+    { region: "Spectra & Star Convergence Limited (26th & 27th April)" },
     { region: "The British Motor Car Company P Ltd (3rd & 4th May)" },
     { region: "Star Mobitel Ltd South Ex (3rd & 4th May)" },
-    { region: "PARAMA RETAIL SOLUTIONS (INDIA) PRIVATE LIMITED (3rd & 4th May)" },
-    { region: "Spectra & Star Convergence Limited (26th & 27th April)" }
+    { region: "PARAMA RETAIL SOLUTIONS (INDIA) PRIVATE LIMITED (3rd & 4th May)" }
   ],
   Gurgaon: [
-    { region: "Spectra & Star Convergence Limited, Ambience Mall (16th & 17th Nov)" },
-    { region: "Spectra And Star Convergence Limited, Ardee Mall (23rd & 24th Nov)" },
-    { region: "Cyberhub (30th Nov & 1st Dec)" },
     { region: "Spectra and Star Convergence Limited (26th & 27th April)" }
   ],
-  Noida: [
-    { region: "Agmatel India Pvt.Ltd, DLF Mall of India (23rd & 24th Nov)" },
-    { region: "Tech Mart, Sector 18 (7th & 8th Dec)" },
-    { region: "Device Mart Private Limited, Sector 18 (7th & 8th Dec)" }
-  ],
-  Ahmedabad: [
-    { region: "Techno Ventures, Prahlad Nagar Road (16th & 17th Nov)" },
-    { region: "Techno Ventures, Maninagar (30th Nov & 1st Dec)" },
-    { region: "Palladium Ahmedabad (7th & 8th Dec)" },
-    { region: "VTech NxtGen Retails LLP (3rd & 4th May)" },
-    { region: "VTECH NXTGEN RETAILS LLP ( PALLADIUM AHMEDABAD ) (26th & 27th April)" }
-  ],
-  Surat: [
-    { region: "IBC Surat (16th & 17th Nov)" },
-    { region: "Shivam Sales, Adajan (30th Nov & 1st Dec)" },
-    { region: "BHATIA COMMUNICATION (IBC CAFE) (3rd & 4th May)" }
-  ],
-  Mumbai: [
-    { region: "Ssk Retails Pvt Ltd, Phoenix Market City Mall (16th & 17th Nov)" },
-    { region: "Retail Shop, Lower Parel (23rd & 24th Nov)" },
-    { region: "Swiftlink Connections Pvt. Ltd. (Phoenix Lower Parel) (3rd & 4th May)" }
-  ],
-  NaviMumbai: [
-    { region: "Breathe Enterprises, Koparkhairane (16th & 17th Nov)" }
-  ],
-  Pune: [
-    { region: "Mall of Millennium Pune (16th & 17th Nov)" },
-    { region: "Karuna Management Services Limited, Viman Nagar (23rd & 24th Nov)" },
-    { region: "Tech Star Retail, Seasons Mall (23rd & 24th Nov)" },
-    { region: "Navkar Communication, Bibvewadi (30th Nov & 1st Dec)" },
-    { region: "Ssk Retails Pvt Ltd, Jangli Maharaj Road (7th & 8th Dec)" },
-    { region: "ABM DELIGHT-MAH (3rd & 4th May)" },
-    { region: "KARUNA MANAGEMENT SERVICES LIMITED (3rd & 4th May)" }
-  ],
-  Bangalore: [
-    { region: "Concepts Inc, Indiranagar (16th & 17th Nov)" },
-    { region: "Samsung Opera House (16th & 17th Nov)" },
-    { region: "UB City Bengaluru (16th & 17th Nov)" },
-    { region: "Concepts Inc, Marathalli (23rd & 24th Nov)" },
-    { region: "Mall of Asia Bengaluru (23rd & 24th Nov)" },
-    { region: "Touch Tech Telecom, Electronic City (30th Nov & 1st Dec)" },
-    { region: "IT World, Lulu Mall (30th Nov & 1st Dec)" },
-    { region: "Jfk Trust, Whitefield (7th & 8th Dec)" },
-    { region: "Innesfree Retail LLP-KOR (3rd & 4th May)" },
-    { region: "Innesfree Retail llp BSW (3rd & 4th May)" },
-    { region: "Concepts Inc (26th & 27th April)" },
-    { region: "ABM DELIGHT (26th & 27th April)" },
-    { region: "CONCEPTS_MOA (26th & 27th April)" }
-  ],
-  Hyderabad: [
-    { region: "Inorbit Mall Hyderabad (23rd & 24th Nov)" },
-    { region: "Vasisht Retail, Madhapur (23rd & 24th Nov)" },
-    { region: "Premium Lifestyle India Pvt Ltd, Kondapur (30th Nov & 1st Dec)" },
-    { region: "S.S. Communications, Himayat Nagar (7th & 8th Dec)" },
-    { region: "VASISHT RETAIL [INORBIT MALL-HYD] (26th & 27th April)" }
-  ],
-  Secunderabad: [
-    { region: "IT World, DSL Virtue Mall (7th & 8th Dec)" }
-  ],
-  Chennai: [
-    { region: "Phoenix MarketCity, Chennai (23rd & 24th Nov)" },
-    { region: "IT World ( Velacherry phoenix ) (26th & 27th April)" }
-  ],
-  Lucknow: [
-    { region: "Lulu Mall Lucknow (23rd & 24th Nov)" },
-    { region: "Sigma It Super Store Pvt Ltd-Lulu (26th & 27th April)" }
-  ],
-  Virar: [
-    { region: "Infiniti Telecom, Virar West (23rd & 24th Nov)" }
-  ],
-  Mohali: [
-    { region: "CP67 Mohali (30th Nov & 1st Dec)" },
-    { region: "ELECTR0PHOTO EQUIPMENTS PRIVATE LIMITED (3rd & 4th May)" }
-  ],
-  Chandigarh: [
-    { region: "Elante Mall, Chandigarh (30th Nov & 1st Dec)" },
-    { region: "Electro Photo Equipments Pvt Ltd, Sector 35 C (7th & 8th Dec)" },
-    { region: "Electrophoto Equipments Private Limited, Sector 22 (7th & 8th Dec)" },
-    { region: "ELECTRO PHOTO EQUIPMENTS PVT.LTD. (3rd & 4th May)" },
-    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B) (26th & 27th April)" }
-  ],
-  Dehradun: [
-    { region: "Arora Enterprises, Old Connaught Place (23rd & 24th Nov)" },
-    { region: "Arora Enterprises, Chakarata Road (30th Nov & 1st Dec)" },
-    { region: "Pacific Mall Dehradun (7th & 8th Dec)" }
+  Trivandrum: [
+    { region: "TECH HAVEN (26th & 27th April)" }
   ],
   Kolkata: [
-    { region: "Park Street, Kolkata (30th Nov & 1st Dec)" },
-    { region: "R G Networks, South City Mall (7th & 8th Dec)" },
     { region: "R G NETWORKS (26th & 27th April)" },
     { region: "SURYA VISTACOM PRIVATE LIMITED (26th & 27th April)" }
   ],
-  Trivandrum: [
-    { region: "Lulu Mall Trivandrum (7th & 8th Dec)" },
-    { region: "TECH HAVEN (26th & 27th April)" }
+  Chandigarh: [
+    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B) (26th & 27th April)" },
+    { region: "ELECTRO PHOTO EQUIPMENTS PVT.LTD. (3rd & 4th May)" }
+  ],
+  Ahmedabad: [
+    { region: "VTECH NXTGEN RETAILS LLP ( PALLADIUM AHMEDABAD ) (26th & 27th April)" },
+    { region: "VTech NxtGen Retails LLP (3rd & 4th May)" }
+  ],
+  Bangalore: [
+    { region: "Concepts Inc (26th & 27th April)" },
+    { region: "ABM DELIGHT (26th & 27th April)" },
+    { region: "CONCEPTS_MOA (26th & 27th April)" },
+    { region: "Innesfree Retail LLP-KOR (3rd & 4th May)" },
+    { region: "Innesfree Retail llp BSW (3rd & 4th May)" }
+  ],
+  Hyderabad: [
+    { region: "VASISHT RETAIL [INORBIT MALL-HYD] (26th & 27th April)" }
+  ],
+  Lucknow: [
+    { region: "Sigma It Super Store Pvt Ltd-Lulu (26th & 27th April)" }
+  ],
+  Mohali: [
+    { region: "ELECTR0PHOTO EQUIPMENTS PRIVATE LIMITED (3rd & 4th May)" }
+  ],
+  Surat: [
+    { region: "BHATIA COMMUNICATION (IBC CAFE) (3rd & 4th May)" }
+  ],
+  Mumbai: [
+    { region: "Swiftlink Connections Pvt. Ltd. (Phoenix Lower Parel) (3rd & 4th May)" }
+  ],
+  Pune: [
+    { region: "ABM DELIGHT-MAH (3rd & 4th May)" },
+    { region: "KARUNA MANAGEMENT SERVICES LIMITED (3rd & 4th May)" }
+  ],
+  Chennai: [
+    { region: "IT World ( Velacherry phoenix ) (26th & 27th April)" }
   ]
 };
+
 
 
 

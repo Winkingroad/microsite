@@ -7,117 +7,60 @@ import { format } from 'date-fns';
 
 const locations = {
   Delhi: [
-    { region: "Select Citywalk Saket" },
-    { region: "Aidhi Projects Pvt Ltd, Rajouri Garden" },
-    { region: "Metro Mobiles, Paschim Vihar" },
-    { region: "Connaught Place" },
-    { region: "Star Mobitel Ltd, South Extension" },
-    { region: "Ambience Vasant Kunj" },
     { region: "The British Motor Car Company P Ltd" },
     { region: "PARAMA RETAIL SOLUTIONS (INDIA) PRIVATE LIMITED" },
     { region: "Spectra & Star Convergence Limited" }
   ],
   Gurgaon: [
     { region: "Spectra & Star Convergence Limited, Ambience Mall" },
-    { region: "Spectra And Star Convergence Limited, Ardee Mall" },
-    { region: "Cyberhub" }
-  ],
-  Noida: [
-    { region: "Agmatel India Pvt.Ltd, DLF Mall of India" },
-    { region: "Tech Mart, Sector 18" },
-    { region: "Device Mart Private Limited, Sector 18" }
+    { region: "Spectra And Star Convergence Limited, Ardee Mall" }
   ],
   Ahmedabad: [
-    { region: "Techno Ventures, Prahlad Nagar Road" },
-    { region: "Techno Ventures, Maninagar" },
-    { region: "Palladium Ahmedabad" },
     { region: "VTech NxtGen Retails LLP" },
     { region: "VTECH NXTGEN RETAILS LLP ( PALLADIUM AHMEDABAD )" }
   ],
   Surat: [
-    { region: "IBC Surat" },
-    { region: "Shivam Sales, Adajan" },
     { region: "BHATIA COMMUNICATION (IBC CAFE)" }
   ],
   Mumbai: [
-    { region: "Ssk Retails Pvt Ltd, Phoenix Market City Mall" },
-    { region: "Retail Shop, Lower Parel" },
     { region: "Swiftlink Connections Pvt. Ltd. (Phoenix Lower Parel)" }
   ],
-  NaviMumbai: [
-    { region: "Breathe Enterprises, Koparkhairane" }
-  ],
   Pune: [
-    { region: "Mall of Millennium Pune" },
-    { region: "Karuna Management Services Limited, Viman Nagar" },
-    { region: "Tech Star Retail, Seasons Mall" },
-    { region: "Navkar Communication, Bibvewadi" },
-    { region: "Ssk Retails Pvt Ltd, Jangli Maharaj Road" },
     { region: "ABM DELIGHT-MAH" },
     { region: "KARUNA MANAGEMENT SERVICES LIMITED" }
   ],
   Bangalore: [
-    { region: "Concepts Inc, Indiranagar" },
-    { region: "Samsung Opera House" },
-    { region: "UB City Bengaluru" },
-    { region: "Concepts Inc, Marathalli" },
-    { region: "Mall of Asia Bengaluru" },
-    { region: "Touch Tech Telecom, Electronic City" },
-    { region: "IT World, Lulu Mall" },
-    { region: "Jfk Trust, Whitefield" },
-    { region: "Innesfree Retail LLP-KOR" },
-    { region: "Innesfree Retail llp BSW" },
+    { region: "Concepts Inc" },
     { region: "ABM DELIGHT" },
-    { region: "CONCEPTS_MOA" }
+    { region: "CONCEPTS_MOA" },
+    { region: "Innesfree Retail LLP-KOR" },
+    { region: "Innesfree Retail llp BSW" }
   ],
   Hyderabad: [
-    { region: "Inorbit Mall Hyderabad" },
-    { region: "Vasisht Retail, Madhapur" },
-    { region: "Premium Lifestyle India Pvt Ltd, Kondapur" },
-    { region: "S.S. Communications, Himayat Nagar" },
     { region: "VASISHT RETAIL [INORBIT MALL-HYD]" }
   ],
-  Secunderabad: [
-    { region: "IT World, DSL Virtue Mall" }
-  ],
   Chennai: [
-    { region: "Phoenix MarketCity, Chennai" },
     { region: "IT World ( Velacherry phoenix )" }
   ],
   Lucknow: [
-    { region: "Lulu Mall Lucknow" },
     { region: "Sigma It Super Store Pvt Ltd-Lulu" }
   ],
-  Virar: [
-    { region: "Infiniti Telecom, Virar West" }
-  ],
-  Mohali: [
-    { region: "CP67 Mohali" },
-    { region: "ELECTR0PHOTO EQUIPMENTS PRIVATE LIMITED" }
-  ],
-  Chandigarh: [
-    { region: "Elante Mall, Chandigarh" },
-    { region: "Electro Photo Equipments Pvt Ltd, Sector 35 C" },
-    { region: "Electrophoto Equipments Private Limited, Sector 22" },
-    { region: "ELECTRO PHOTO EQUIPMENTS PVT.LTD." },
-    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B)" }
-  ],
-  Dehradun: [
-    { region: "Arora Enterprises, Old Connaught Place" },
-    { region: "Pacific Mall Dehradun" },
-    { region: "Arora Enterprises, Chakarata Road" }
+  Trivandrum: [
+    { region: "TECH HAVEN" }
   ],
   Kolkata: [
-    { region: "Park Street, Kolkata" },
-    { region: "R G Networks, South City Mall" },
     { region: "R G NETWORKS" },
     { region: "SURYA VISTACOM PRIVATE LIMITED" }
   ],
-  Trivandrum: [
-    { region: "Lulu Mall Trivandrum" },
-    { region: "TECH HAVEN" }
+  Chandigarh: [
+    { region: "ELECTRO PHOTO EQUIPMENTS PVT.LTD." },
+    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B)" }
+  ],
+  Mohali: [
+    { region: "ELECTR0PHOTO EQUIPMENTS PRIVATE LIMITED" }
   ]
 };
+
 
 
 const Ranking = () => {

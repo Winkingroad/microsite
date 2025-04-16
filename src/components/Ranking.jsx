@@ -158,7 +158,7 @@ const Ranking = () => {
           const matchesRegion = region ? entry.Region === region : true;
           const matchesStore = store ? entry.Store === store : true;
           const matchesDate = date ? entry.Date === format(date, 'yyyy-MM-dd') : true;
-          const matchesSet = setFilter ? entry.Set === setFilter : true;
+          const matchesSet = setFilter ? entry.Sets === setFilter : true;
           return matchesRegion && matchesStore && matchesDate && matchesSet;
         })
         .map((entry, index) => ({ ...entry, serial: index + 1 }));

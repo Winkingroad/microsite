@@ -198,7 +198,7 @@ const Register = () => {
               name="age"
               value={formData.age}
               onChange={handleChange}
-              placeholder="Age *"
+              placeholder="Age "
               className="w-full px-3 md:px-4 py-3 md:py-4 bg-gray-700 bg-opacity-50 text-white placeholder-gray-100 focus:outline-none text-lg md:text-xl font-bold md:font-extrabold rounded-lg"
               required
             />

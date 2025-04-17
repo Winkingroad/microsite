@@ -10,7 +10,7 @@ module.exports = {
       },
       backgroundImage: {
         'custom-radial': 'radial-gradient(circle, #002447, #000000)',
-        'main-bg': "url('/src/assets/background.png')",
+        'main-bg': "url('/src/assets/website banner bg.png')",
         'thumbnail': "url('/src/assets/Group\ 6.png')"
       },
       boxShadow: {

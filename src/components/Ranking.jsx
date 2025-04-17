@@ -3,31 +3,29 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { ChevronDown } from 'lucide-react';
 import Calendar from '../assets/calendar.png';
-import { format } from 'date-fns'; 
+import { format } from 'date-fns';
+import bgImage from '../assets/website banner bg.png'; // ✅ import background image
 
 const locations = {
   Delhi: [
+    { region: "Spectra & Star Convergence Limited" },
     { region: "The British Motor Car Company P Ltd" },
-    { region: "PARAMA RETAIL SOLUTIONS (INDIA) PRIVATE LIMITED" },
-    { region: "Spectra & Star Convergence Limited" }
+    { region: "Star Mobitel Ltd South Ex" },
+    { region: "PARAMA RETAIL SOLUTIONS (INDIA) PRIVATE LIMITED" }
   ],
-  Gurgaon: [
-    { region: "Spectra & Star Convergence Limited, Ambience Mall" },
-    { region: "Spectra And Star Convergence Limited, Ardee Mall" }
+  Gurgaon: [{ region: "Spectra and Star Convergence Limited, Cyber Hub" }],
+  Trivandrum: [{ region: "TECH HAVEN" }],
+  Kolkata: [
+    { region: "R G NETWORKS" },
+    { region: "SURYA VISTACOM PRIVATE LIMITED" }
+  ],
+  Chandigarh: [
+    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B)" },
+    { region: "ELECTRO PHOTO EQUIPMENTS PVT.LTD." }
   ],
   Ahmedabad: [
-    { region: "VTech NxtGen Retails LLP" },
-    { region: "VTECH NXTGEN RETAILS LLP ( PALLADIUM AHMEDABAD )" }
-  ],
-  Surat: [
-    { region: "BHATIA COMMUNICATION (IBC CAFE)" }
-  ],
-  Mumbai: [
-    { region: "Swiftlink Connections Pvt. Ltd. (Phoenix Lower Parel)" }
-  ],
-  Pune: [
-    { region: "ABM DELIGHT-MAH" },
-    { region: "KARUNA MANAGEMENT SERVICES LIMITED" }
+    { region: "VTECH NXTGEN RETAILS LLP ( PALLADIUM AHMEDABAD )" },
+    { region: "VTech NxtGen Retails LLP" }
   ],
   Bangalore: [
     { region: "Concepts Inc" },
@@ -36,32 +34,17 @@ const locations = {
     { region: "Innesfree Retail LLP-KOR" },
     { region: "Innesfree Retail llp BSW" }
   ],
-  Hyderabad: [
-    { region: "VASISHT RETAIL [INORBIT MALL-HYD]" }
+  Hyderabad: [{ region: "VASISHT RETAIL [INORBIT MALL-HYD]" }],
+  Lucknow: [{ region: "Sigma It Super Store Pvt Ltd-Lulu" }],
+  Mohali: [{ region: "ELECTR0PHOTO EQUIPMENTS PRIVATE LIMITED" }],
+  Surat: [{ region: "BHATIA COMMUNICATION (IBC CAFE)" }],
+  Mumbai: [{ region: "Swiftlink Connections Pvt. Ltd. (Phoenix Lower Parel)" }],
+  Pune: [
+    { region: "ABM DELIGHT-MAH" },
+    { region: "KARUNA MANAGEMENT SERVICES LIMITED" }
   ],
-  Chennai: [
-    { region: "IT World ( Velacherry phoenix )" }
-  ],
-  Lucknow: [
-    { region: "Sigma It Super Store Pvt Ltd-Lulu" }
-  ],
-  Trivandrum: [
-    { region: "TECH HAVEN" }
-  ],
-  Kolkata: [
-    { region: "R G NETWORKS" },
-    { region: "SURYA VISTACOM PRIVATE LIMITED" }
-  ],
-  Chandigarh: [
-    { region: "ELECTRO PHOTO EQUIPMENTS PVT.LTD." },
-    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B)" }
-  ],
-  Mohali: [
-    { region: "ELECTR0PHOTO EQUIPMENTS PRIVATE LIMITED" }
-  ]
+  Chennai: [{ region: "IT World ( Velacherry phoenix )" }]
 };
-
-
 
 const Ranking = () => {
   const datePickerRef = useRef(null);
@@ -140,132 +123,141 @@ const Ranking = () => {
   }, []);
 
   return (
-    <div className="min-h-screen p-2 sm:p-4 md:p-8 text-white w-full bg-main-bg bg-cover bg-center">
-      <div className="max-w-7xl mx-auto bg-transparent rounded shadow-md mb-4 md:mb-6">
-        <div className="flex flex-col w-full items-center space-y-3 md:space-y-4 mb-4 md:mb-6 px-2 md:px-6">
-          
-          {/* City Dropdown */}
-          <div className="w-full md:w-2/3 dropdown-container relative">
-            <button
-              onClick={() => setCityOpen(!isCityOpen)}
-              className="w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none  flex justify-between items-center"
-            >
-              <span>{region || "Select Your City"}</span>
-              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isCityOpen ? 'rotate-180' : ''}`} />
-            </button>
+    <main className="relative w-full flex-grow text-white ">
+      {/* Blurred Background */}
+      <div
+        className="absolute inset-0 z-0 bg-main-bg"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: '1970px',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'repeat',
+          filter: 'blur(20px)',
+        }}
+      />
 
-            {isCityOpen && (
-              <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
-                {Object.keys(locations).map(city => (
-                  <div
-                    key={city}
-                    className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
-                    onClick={() => handleRegionChange(city)}
-                  >
-                    {city}
-                  </div>
-                ))}
+      {/* Content Overlay */}
+      <div className="relative z-10 min-h-screen p-2 sm:p-4 md:p-8 w-full">
+        <div className="max-w-7xl mx-auto bg-transparent rounded shadow-md mb-4 md:mb-6">
+          <div className="flex flex-col w-full items-center space-y-3 md:space-y-4 mb-4 md:mb-6 px-2 md:px-6">
+            {/* City Dropdown */}
+            <div className="w-full md:w-2/3 dropdown-container relative">
+              <button
+                onClick={() => setCityOpen(!isCityOpen)}
+                className="w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none  flex justify-between items-center"
+              >
+                <span>{region || "Select Your City"}</span>
+                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isCityOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isCityOpen && (
+                <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
+                  {Object.keys(locations).map(city => (
+                    <div
+                      key={city}
+                      className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
+                      onClick={() => handleRegionChange(city)}
+                    >
+                      {city}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Region Dropdown */}
+            <div className="w-full md:w-2/3 dropdown-container relative">
+              <button
+                onClick={() => region && setRegionOpen(!isRegionOpen)}
+                disabled={!region}
+                className={`w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base  flex justify-between items-center ${!region && 'opacity-50 cursor-not-allowed'}`}
+              >
+                <span>{store || "Select Your Samsung Experience Store"}</span>
+                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isRegionOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isRegionOpen && region && (
+                <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
+                  {locations[region].map(({ region: storeRegion }) => (
+                    <div
+                      key={storeRegion}
+                      className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
+                      onClick={() => handleStoreChange(storeRegion)}
+                    >
+                      {storeRegion}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Set Dropdown */}
+            <div className="w-full md:w-2/3 dropdown-container relative">
+              <button
+                onClick={() => setIsSetOpen(!isSetOpen)}
+                className="w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none flex justify-between items-center"
+              >
+                <span>{setFilter || "Select Set"}</span>
+                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isSetOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isSetOpen && (
+                <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
+                  {["Set A", "Set B", "Set C"].map(setName => (
+                    <div
+                      key={setName}
+                      className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
+                      onClick={() => {
+                        setSetFilter(setName);
+                        setIsSetOpen(false);
+                      }}
+                    >
+                      {setName}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Date Input */}
+            <div className="w-full md:w-2/3" onClick={() => datePickerRef.current.setOpen(true)}>
+              <div className="flex flex-row items-center justify-between w-full cursor-pointer bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none">
+                <DatePicker
+                  ref={datePickerRef}
+                  selected={date}
+                  onChange={(date) => setDate(date)}
+                  placeholderText="Select the Date"
+                  dateFormat="yyyy-MM-dd"
+                  className="cursor-pointer w-full bg-gray-900 text-white rounded-lg text-base focus:outline-none"
+                />
+                <img src={Calendar} className="h-6 w-6" alt="Calendar Icon" />
               </div>
-            )}
-          </div>
-
-          {/* Region Dropdown */}
-          <div className="w-full md:w-2/3 dropdown-container relative">
-            <button
-              onClick={() => region && setRegionOpen(!isRegionOpen)}
-              disabled={!region}
-              className={`w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base  flex justify-between items-center ${!region && 'opacity-50 cursor-not-allowed'}`}
-            >
-              <span>{store || "Select Your Samsung Experience Store"}</span>
-              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isRegionOpen ? 'rotate-180' : ''}`} />
-            </button>
-
-            {isRegionOpen && region && (
-              <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
-                {locations[region].map(({ region: storeRegion }) => (
-                  <div
-                    key={storeRegion}
-                    className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
-                    onClick={() => handleStoreChange(storeRegion)}
-                  >
-                    {storeRegion}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Set Dropdown */}
-          <div className="w-full md:w-2/3 dropdown-container relative">
-            <button
-              onClick={() => setIsSetOpen(!isSetOpen)}
-              className="w-full bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none flex justify-between items-center"
-            >
-              <span>{setFilter || "Select Set"}</span>
-              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isSetOpen ? 'rotate-180' : ''}`} />
-            </button>
-
-            {isSetOpen && (
-              <div className="absolute w-full mt-1 bg-[#0a202b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
-                {["Set A", "Set B", "Set C"].map(setName => (
-                  <div
-                    key={setName}
-                    className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
-                    onClick={() => {
-                      setSetFilter(setName);
-                      setIsSetOpen(false);
-                    }}
-                  >
-                    {setName}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Date Input */}
-          <div className="w-full md:w-2/3" onClick={() => datePickerRef.current.setOpen(true)}>
-            <div className="flex flex-row items-center justify-between w-full cursor-pointer bg-gray-900 text-white py-3 px-4 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-white">
-              <DatePicker
-                ref={datePickerRef}
-                selected={date}
-                onChange={(date) => setDate(date)}
-                placeholderText="Select the Date"
-                dateFormat="yyyy-MM-dd"
-                className="cursor-pointer w-full bg-gray-900 text-white rounded-lg text-base focus:outline-none placeholder-white"
-              />
-              <img src={Calendar} className="h-6 w-6" alt="Calendar Icon" />
             </div>
           </div>
-        </div>
 
-        {/* Table Section */}
-        <div className="w-full overflow-x-auto overflow-y-auto border-gray-900 border rounded-xl" style={{ maxHeight: '70vh', scrollbarWidth: 'none' }}>
-          <div className="min-w-full inline-block align-middle">
-            <div className="overflow-hidden">
-              <table className="min-w-full divide-y divide-gray-700">
-                <thead className="bg-gray-900 bg-opacity-50">
-                  <tr>
-                    <th className="px-3 md:px-4 py-2 md:py-3 text-center text-xs md:text-sm font-semibold text-white uppercase tracking-wider w-1/6 border-r-2 border-gray-500">Ranking</th>
-                    <th className="px-3 md:px-4 py-2 md:py-3 text-center text-xs md:text-sm font-semibold text-white uppercase tracking-wider w-1/2 md:w-1/3 border-r-2 border-gray-500">Name</th>
-                    {/* <th className="px-3 md:px-4 py-2 md:py-3 text-center text-xs md:text-sm font-semibold text-white uppercase tracking-wider w-1/3">Lap Time</th> */}
-                  </tr>
-                </thead>
-                <tbody className="bg-gray-900 bg-opacity-10 divide-y divide-gray-700">
-                  {filteredData.map((entry, index) => (
-                    <tr key={index} className="hover:bg-gray-800 hover:bg-opacity-50 transition-colors duration-200">
-                      <td className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm text-white border-r-2 border-gray-500 text-center">{entry.serial}</td>
-                      <td className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm text-white border-r-2 border-gray-500 text-center">{entry.Name}</td>
-                      {/* <td className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm text-white text-center">{entry.LapTime}</td> */}
+          {/* Table Section */}
+          <div className="w-full overflow-x-auto overflow-y-auto border-gray-900 border rounded-xl" style={{ maxHeight: '70vh', scrollbarWidth: 'none' }}>
+            <div className="min-w-full inline-block align-middle">
+              <div className="overflow-hidden">
+                <table className="min-w-full divide-y divide-gray-700">
+                  <thead className="bg-gray-900 bg-opacity-50">
+                    <tr>
+                      <th className="px-3 md:px-4 py-2 md:py-3 text-center text-xs md:text-sm font-semibold text-white uppercase tracking-wider w-1/6 border-r-2 border-gray-500">Ranking</th>
+                      <th className="px-3 md:px-4 py-2 md:py-3 text-center text-xs md:text-sm font-semibold text-white uppercase tracking-wider w-1/2 md:w-1/3 border-r-2 border-gray-500">Name</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="bg-gray-900 bg-opacity-10 divide-y divide-gray-700">
+                    {filteredData.map((entry, index) => (
+                      <tr key={index} className="hover:bg-gray-800 hover:bg-opacity-50 transition-colors duration-200">
+                        <td className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm text-white border-r-2 border-gray-500 text-center">{entry.serial}</td>
+                        <td className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm text-white border-r-2 border-gray-500 text-center">{entry.Name}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

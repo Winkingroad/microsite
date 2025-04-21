@@ -57,9 +57,6 @@ const locations = {
   ]
 };
 
-
-
-
 const Register = () => {
   const [formData, setFormData] = useState({
     name: '', phoneNumber: '', email: '', region: '', store: '', age: ''
@@ -114,7 +111,8 @@ const Register = () => {
   };
 
   const handleButtonClick = () => {
-    if (formRef.current && Object.values(formData).every(field => field)) {
+    const { name, phoneNumber, email, region, store } = formData;
+    if (formRef.current && name && phoneNumber && email && region && store) {
       formRef.current.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
     } else {
       setSubmissionMessage('Please fill in all required fields.');
@@ -123,18 +121,14 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white w-full px-4 py-8 md:py-0">
-      {/* Background image container with responsive sizing */}
       <div className="fixed inset-0 bg-main-bg bg-no-repeat bg-center opacity-50 pointer-events-none"
-           style={{ backgroundSize: 'contain',
-            filter: 'blur(20px)',
-            }} />
-      
-      {/* Main content container */}
+           style={{ backgroundSize: 'contain', filter: 'blur(20px)' }} />
+
       <div className="relative w-full max-w-md md:max-w-xl p-4 md:p-8 bg-white bg-opacity-5 shadow-custom2 rounded-3xl md:rounded-[44px]">
         <h2 className="text-2xl md:text-3xl font-semibold text-left mb-4 md:mb-6 py-2 md:py-4 border-b border-white border-opacity-20">
           Register Yourself
         </h2>
-        
+
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
           <div className="space-y-3 md:space-y-4">
             <input
@@ -146,7 +140,7 @@ const Register = () => {
               className="w-full px-3 md:px-4 py-3 md:py-4 bg-gray-700 bg-opacity-50 text-white placeholder-gray-100 focus:outline-none text-lg md:text-xl font-bold md:font-extrabold rounded-lg"
               required
             />
-            
+
             <input
               type="text"
               name="phoneNumber"
@@ -156,7 +150,7 @@ const Register = () => {
               className="w-full px-3 md:px-4 py-3 md:py-4 bg-gray-700 bg-opacity-50 text-white placeholder-gray-100 focus:outline-none text-lg md:text-xl font-bold md:font-extrabold rounded-lg"
               required
             />
-            
+
             <input
               type="email"
               name="email"
@@ -166,7 +160,7 @@ const Register = () => {
               className="w-full px-3 md:px-4 py-3 md:py-4 bg-gray-700 bg-opacity-50 text-white placeholder-gray-100 focus:outline-none text-lg md:text-xl font-bold md:font-extrabold rounded-lg"
               required
             />
-            
+
             <select
               name="region"
               value={formData.region}
@@ -179,7 +173,7 @@ const Register = () => {
                 <option key={city} className='bg-[#0a202b]' value={city}>{city}</option>
               ))}
             </select>
-            
+
             <select
               name="store"
               value={formData.store}
@@ -192,44 +186,45 @@ const Register = () => {
                 <option key={index} className='bg-[#0a202b]' value={region.region}>{region.region}</option>
               ))}
             </select>
-            
+
             <input
               type="number"
               name="age"
               value={formData.age}
               onChange={handleChange}
-              placeholder="Age *"
+              placeholder="Age"
               className="w-full px-3 md:px-4 py-3 md:py-4 bg-gray-700 bg-opacity-50 text-white placeholder-gray-100 focus:outline-none text-lg md:text-xl font-bold md:font-extrabold rounded-lg"
-              required
             />
           </div>
         </form>
+
         {submissionMessage && (
           <p className="mt-4 text-center text-lg font-semibold text-green-400">{submissionMessage}</p>
         )}
       </div>
+
       <div className='mt-5'>
-      <button
-        type="button"
-        onClick={handleButtonClick}
-        className="relative  -mt-6 md:-mt-8 flex items-center justify-center space-x-2 px-6 py-3 bg-white rounded-full font-semibold text-lg md:text-xl transition duration-300 hover:bg-opacity-25 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-      >
-        <span className='text-[#172554]'>All Set</span>
-        <svg
-          className="w-5 h-5 md:w-6 md:h-6 "
-          fill="none"
-          stroke="#172554"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          type="button"
+          onClick={handleButtonClick}
+          className="relative -mt-6 md:-mt-8 flex items-center justify-center space-x-2 px-6 py-3 bg-white rounded-full font-semibold text-lg md:text-xl transition duration-300 hover:bg-opacity-25 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
-          />
-        </svg>
-      </button>
+          <span className='text-[#172554]'>All Set</span>
+          <svg
+            className="w-5 h-5 md:w-6 md:h-6"
+            fill="none"
+            stroke="#172554"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   );

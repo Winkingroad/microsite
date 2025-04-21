@@ -54,11 +54,11 @@ function HomePage() {
 
         {/* Description */}
         <p className="max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
-          We are thrilled to introduce an exclusive gaming experience at Samsung Experience Stores, featuring our flagship device Galaxy S25 Ultra crafted to elevate mobile gaming to new heights. This 2 week long invites everyone to dive in, explore, and be part of a truly immersive adventure.
+          We are thrilled to introduce an exclusive gaming event at Samsung Experience Stores, featuring our flagship device the Galaxy S25 Ultra  built to take mobile gaming to the next level. This two-week Gamethon invites everyone to dive in, explore, and be part of a truly immersive adventure.
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
-          From 26th - 27th April and 3rd - 4th May 2025, #PlayGalaxy will come alive across 25 Samsung Experience Stores in 14 cities, offering countless opportunities to jump into the action. Come and join us on a journey designed to explore the thrill and excitement of gaming with our hero devices!
+         From 26th–27th April and 3rd–4th May 2025, #PlayGalaxy will light up 25 Samsung Experience Stores across 14 cities, offering endless opportunities to jump into the action. Come, be a part of this exciting journey.
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg mt-0 text-center">

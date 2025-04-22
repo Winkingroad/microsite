@@ -3,59 +3,60 @@ import arrow from '../assets/rightarrow.png';
 
 const locations = {
   Delhi: [
-    { region: "Spectra & Star Convergence Limited (26th & 27th April)" },
-    { region: "The British Motor Car Company P Ltd (3rd & 4th May)" },
-    { region: "Star Mobitel Ltd South Ex (3rd & 4th May)" },
-    { region: "PARAMA RETAIL SOLUTIONS (INDIA) PRIVATE LIMITED (3rd & 4th May)" }
+    { region: "Ambience Vasant Kunj (26th & 27th April)" },
+    { region: "CONNAUGHT PLACE, DELHI (3rd & 4th May)" },
+    { region: "SOUTH-EX, DELHI (3rd & 4th May)" },
+    { region: "NEW CODE - SELECT CITYWALK (3rd & 4th May)" }
   ],
   Gurgaon: [
-    { region: "Spectra and Star Convergence Limited, Cyber Hub (26th & 27th April)" }
+    { region: "Cyber Hub, Gurgaon (26th & 27th April)" }
   ],
   Trivandrum: [
-    { region: "TECH HAVEN (26th & 27th April)" }
+    { region: "Lulu Trivandrum (26th & 27th April)" }
   ],
   Kolkata: [
-    { region: "R G NETWORKS (26th & 27th April)" },
-    { region: "SURYA VISTACOM PRIVATE LIMITED (26th & 27th April)" }
+    { region: "South City Kolkata (26th & 27th April)" },
+    { region: "PARK STREET, KOLKATA (26th & 27th April)" }
   ],
   Chandigarh: [
     { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B) (26th & 27th April)" },
-    { region: "ELECTRO PHOTO EQUIPMENTS PVT.LTD. (3rd & 4th May)" }
+    { region: "ELANTE MALL, CHANDIGARH (3rd & 4th May)" }
   ],
   Ahmedabad: [
-    { region: "VTECH NXTGEN RETAILS LLP ( PALLADIUM AHMEDABAD ) (26th & 27th April)" },
-    { region: "VTech NxtGen Retails LLP (3rd & 4th May)" }
+    { region: "Palladium Mall, Ahmedabad (26th & 27th April)" },
+    { region: "VTech NxtGen Retails LLP (Vijay Cross Road  Navrangpura) (3rd & 4th May)" }
   ],
   Bangalore: [
-    { region: "Concepts Inc (26th & 27th April)" },
-    { region: "ABM DELIGHT (26th & 27th April)" },
-    { region: "CONCEPTS_MOA (26th & 27th April)" },
-    { region: "Innesfree Retail LLP-KOR (3rd & 4th May)" },
-    { region: "Innesfree Retail llp BSW (3rd & 4th May)" }
+    { region: "Samsung Experience Store - Concepts Inc - Indiranagar (26th & 27th April)" },
+    { region: "OPERA HOUSE BENGALURU (26th & 27th April)" },
+    { region: "Mall Of Asia, Bengaluru (26th & 27th April)" },
+    { region: "Innesfree Koramangala (3rd & 4th May)" },
+    { region: "INNESFREE BASAVESHWARA NAGAR (3rd & 4th May)" }
   ],
   Hyderabad: [
-    { region: "VASISHT RETAIL [INORBIT MALL-HYD] (26th & 27th April)" }
+    { region: "Inorbit Mall, Hyderabad (26th & 27th April)" }
   ],
   Lucknow: [
-    { region: "Sigma It Super Store Pvt Ltd-Lulu (26th & 27th April)" }
+    { region: "Lulu Mall, Lucknow (26th & 27th April)" }
   ],
   Mohali: [
-    { region: "ELECTR0PHOTO EQUIPMENTS PRIVATE LIMITED (3rd & 4th May)" }
+    { region: "CP67 MOHALI (3rd & 4th May)" }
   ],
   Surat: [
-    { region: "BHATIA COMMUNICATION (IBC CAFE) (3rd & 4th May)" }
+    { region: "IBC, SURAT (3rd & 4th May)" }
   ],
   Mumbai: [
-    { region: "Swiftlink Connections Pvt. Ltd. (Phoenix Lower Parel) (3rd & 4th May)" }
+    { region: "NEW CODE - LOWER PAREL MUMBAI (3rd & 4th May)" }
   ],
   Pune: [
-    { region: "ABM DELIGHT-MAH (3rd & 4th May)" },
-    { region: "KARUNA MANAGEMENT SERVICES LIMITED (3rd & 4th May)" }
+    { region: "Mall of Milenium,Pune (3rd & 4th May)" },
+    { region: "PHOENIX MARKET CITY VIMAN NAGAR, PUNE (3rd & 4th May)" }
   ],
   Chennai: [
-    { region: "IT World ( Velacherry phoenix ) (26th & 27th April)" }
+    { region: "Phoenix, Chennai (26th & 27th April)" }
   ]
 };
+
 
 const Register = () => {
   const [formData, setFormData] = useState({

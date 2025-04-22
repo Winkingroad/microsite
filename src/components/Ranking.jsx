@@ -8,43 +8,61 @@ import bgImage from '../assets/website banner bg.png'; // ✅ import background 
 
 const locations = {
   Delhi: [
-    { region: "Spectra & Star Convergence Limited" },
-    { region: "The British Motor Car Company P Ltd" },
-    { region: "Star Mobitel Ltd South Ex" },
-    { region: "PARAMA RETAIL SOLUTIONS (INDIA) PRIVATE LIMITED" }
+    { region: "Ambience Vasant Kunj" },
+    { region: "CONNAUGHT PLACE, DELHI" },
+    { region: "SOUTH-EX, DELHI" },
+    { region: "NEW CODE - SELECT CITYWALK" }
   ],
-  Gurgaon: [{ region: "Spectra and Star Convergence Limited, Cyber Hub" }],
-  Trivandrum: [{ region: "TECH HAVEN" }],
+  Gurgaon: [
+    { region: "Cyber Hub, Gurgaon" }
+  ],
+  Trivandrum: [
+    { region: "Lulu Trivandrum" }
+  ],
   Kolkata: [
-    { region: "R G NETWORKS" },
-    { region: "SURYA VISTACOM PRIVATE LIMITED" }
+    { region: "South City Kolkata" },
+    { region: "PARK STREET, KOLKATA" }
   ],
   Chandigarh: [
     { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B)" },
-    { region: "ELECTRO PHOTO EQUIPMENTS PVT.LTD." }
+    { region: "ELANTE MALL, CHANDIGARH" }
   ],
   Ahmedabad: [
-    { region: "VTECH NXTGEN RETAILS LLP ( PALLADIUM AHMEDABAD )" },
-    { region: "VTech NxtGen Retails LLP" }
+    { region: "Palladium Mall, Ahmedabad" },
+    { region: "VTech NxtGen Retails LLP (Vijay Cross Road  Navrangpura)" }
   ],
   Bangalore: [
-    { region: "Concepts Inc" },
-    { region: "ABM DELIGHT" },
-    { region: "CONCEPTS_MOA" },
-    { region: "Innesfree Retail LLP-KOR" },
-    { region: "Innesfree Retail llp BSW" }
+    { region: "Samsung Experience Store - Concepts Inc - Indiranagar" },
+    { region: "OPERA HOUSE BENGALURU" },
+    { region: "Mall Of Asia, Bengaluru" },
+    { region: "Innesfree Koramangala" },
+    { region: "INNESFREE BASAVESHWARA NAGAR" }
   ],
-  Hyderabad: [{ region: "VASISHT RETAIL [INORBIT MALL-HYD]" }],
-  Lucknow: [{ region: "Sigma It Super Store Pvt Ltd-Lulu" }],
-  Mohali: [{ region: "ELECTR0PHOTO EQUIPMENTS PRIVATE LIMITED" }],
-  Surat: [{ region: "BHATIA COMMUNICATION (IBC CAFE)" }],
-  Mumbai: [{ region: "Swiftlink Connections Pvt. Ltd. (Phoenix Lower Parel)" }],
+  Hyderabad: [
+    { region: "Inorbit Mall, Hyderabad" }
+  ],
+  Lucknow: [
+    { region: "Lulu Mall, Lucknow" }
+  ],
+  Mohali: [
+    { region: "CP67 MOHALI" }
+  ],
+  Surat: [
+    { region: "IBC, SURAT" }
+  ],
+  Mumbai: [
+    { region: "NEW CODE - LOWER PAREL MUMBAI" }
+  ],
   Pune: [
-    { region: "ABM DELIGHT-MAH" },
-    { region: "KARUNA MANAGEMENT SERVICES LIMITED" }
+    { region: "Mall of Milenium,Pune" },
+    { region: "PHOENIX MARKET CITY VIMAN NAGAR, PUNE" }
   ],
-  Chennai: [{ region: "IT World ( Velacherry phoenix )" }]
+  Chennai: [
+    { region: "Phoenix, Chennai" }
+  ]
 };
+
+
 
 const Ranking = () => {
   const datePickerRef = useRef(null);

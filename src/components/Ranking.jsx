@@ -7,62 +7,60 @@ import { format } from 'date-fns';
 import bgImage from '../assets/website banner bg.png'; // ✅ import background image
 
 const locations = {
-  Delhi: [
-    { region: "Ambience Vasant Kunj" },
-    { region: "CONNAUGHT PLACE, DELHI" },
-    { region: "SOUTH-EX, DELHI" },
-    { region: "NEW CODE - SELECT CITYWALK" }
-  ],
-  Gurgaon: [
-    { region: "Cyber Hub, Gurgaon" }
-  ],
-  Trivandrum: [
-    { region: "Lulu Trivandrum" }
-  ],
-  Kolkata: [
-    { region: "South City Kolkata" },
-    { region: "PARK STREET, KOLKATA" }
-  ],
-  Chandigarh: [
-    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B)" },
-    { region: "ELANTE MALL, CHANDIGARH" }
-  ],
-  Ahmedabad: [
-    { region: "Palladium Mall, Ahmedabad" },
-    { region: "VTech NxtGen Retails LLP (Vijay Cross Road  Navrangpura)" }
-  ],
-  Bangalore: [
-    { region: "Samsung Experience Store - Concepts Inc - Indiranagar" },
-    { region: "OPERA HOUSE BENGALURU" },
-    { region: "Mall Of Asia, Bengaluru" },
-    { region: "Innesfree Koramangala" },
-    { region: "INNESFREE BASAVESHWARA NAGAR" }
-  ],
-  Hyderabad: [
-    { region: "Inorbit Mall, Hyderabad" }
-  ],
-  Lucknow: [
-    { region: "Lulu Mall, Lucknow" }
-  ],
-  Mohali: [
-    { region: "CP67 MOHALI" }
-  ],
-  Surat: [
-    { region: "IBC, SURAT" }
-  ],
-  Mumbai: [
-    { region: "NEW CODE - LOWER PAREL MUMBAI" }
-  ],
-  Pune: [
-    { region: "Mall of Milenium,Pune" },
-    { region: "PHOENIX MARKET CITY VIMAN NAGAR, PUNE" }
-  ],
-  Chennai: [
-    { region: "Phoenix, Chennai" }
-  ]
+ Delhi: [
+   { region: "Samsung Experience Store - Ambience Vasant Kunj, Delhi" },
+   { region: "Samsung Experience Store - Connaught Place, Delhi" },
+   { region: "Samsung Experience Store - South Extension II, Delhi" },
+   { region: "Samsung Experience Store - Select Citywalk, Saket, Delhi" }
+ ],
+ Gurgaon: [
+   { region: "Samsung Experience Store - Cyberhub, Gurugram" }
+ ],
+ Trivandrum: [
+   { region: "Samsung Experience Store - Lulu Mall, Trivandrum" }
+ ],
+ Kolkata: [
+   { region: "Samsung Experience Store - South City Mall, Kolkata" },
+   { region: "Samsung Experience Store - Park Street, Kolkata" }
+ ],
+ Chandigarh: [
+   { region: "Samsung Experience Store - Sector 22, Chandigarh" },
+   { region: "Samsung Experience Store - Elante Mall, Chandigarh" }
+ ],
+ Ahmedabad: [
+   { region: "Samsung Experience Store - Palladium, Ahmedabad" },
+   { region: "Samsung Experience Store - Navrangpura, Ahmedabad" }
+ ],
+ Bangalore: [
+   { region: "Samsung Experience Store - Indiranagar, Bengaluru" },
+   { region: "Samsung Opera House, Bengaluru" },
+   { region: "Samsung Experience Store - Mall of Asia, Bengaluru" },
+   { region: "Samsung Experience Store - Koramangala, Bengaluru" },
+   { region: "Samsung Experience Store - Basaveshwara Nagar, Bengaluru" }
+ ],
+ Hyderabad: [
+   { region: "Samsung Experience Store - Inorbit Mall, Hyderabad" }
+ ],
+ Lucknow: [
+   { region: "Samsung Experience Store - Lulu Mall, Lucknow" }
+ ],
+ Mohali: [
+   { region: "Samsung Experience Store - CP67 Mall, Mohali" }
+ ],
+ Surat: [
+   { region: "Samsung Experience Store - IBC, Surat" }
+ ],
+ Mumbai: [
+   { region: "Samsung Experience Store - Phoenix Palladium, Lower Parel, Mumbai" }
+ ],
+ Pune: [
+   { region: "Samsung Experience Store - Mall of Millennium, Pune" },
+   { region: "Samsung Experience Store - Phoenix Marketcity, Pune" }
+ ],
+ Chennai: [
+   { region: "Samsung Experience Store - Phoenix MarketCity, Chennai" }
+ ]
 };
-
-
 
 const Ranking = () => {
   const datePickerRef = useRef(null);

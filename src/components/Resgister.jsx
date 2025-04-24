@@ -2,59 +2,59 @@ import React, { useRef, useState } from 'react';
 import arrow from '../assets/rightarrow.png';
 
 const locations = {
-  Delhi: [
-    { region: "Ambience Vasant Kunj (26th & 27th April)" },
-    { region: "CONNAUGHT PLACE, DELHI (3rd & 4th May)" },
-    { region: "SOUTH-EX, DELHI (3rd & 4th May)" },
-    { region: "NEW CODE - SELECT CITYWALK (3rd & 4th May)" }
-  ],
-  Gurgaon: [
-    { region: "Cyber Hub, Gurgaon (26th & 27th April)" }
-  ],
-  Trivandrum: [
-    { region: "Lulu Trivandrum (26th & 27th April)" }
-  ],
-  Kolkata: [
-    { region: "South City Kolkata (26th & 27th April)" },
-    { region: "PARK STREET, KOLKATA (26th & 27th April)" }
-  ],
-  Chandigarh: [
-    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B) (26th & 27th April)" },
-    { region: "ELANTE MALL, CHANDIGARH (3rd & 4th May)" }
-  ],
-  Ahmedabad: [
-    { region: "Palladium Mall, Ahmedabad (26th & 27th April)" },
-    { region: "VTech NxtGen Retails LLP (Vijay Cross Road  Navrangpura) (3rd & 4th May)" }
-  ],
-  Bangalore: [
-    { region: "Samsung Experience Store - Concepts Inc - Indiranagar (26th & 27th April)" },
-    { region: "OPERA HOUSE BENGALURU (26th & 27th April)" },
-    { region: "Mall Of Asia, Bengaluru (26th & 27th April)" },
-    { region: "Innesfree Koramangala (3rd & 4th May)" },
-    { region: "INNESFREE BASAVESHWARA NAGAR (3rd & 4th May)" }
-  ],
-  Hyderabad: [
-    { region: "Inorbit Mall, Hyderabad (26th & 27th April)" }
-  ],
-  Lucknow: [
-    { region: "Lulu Mall, Lucknow (26th & 27th April)" }
-  ],
-  Mohali: [
-    { region: "CP67 MOHALI (3rd & 4th May)" }
-  ],
-  Surat: [
-    { region: "IBC, SURAT (3rd & 4th May)" }
-  ],
-  Mumbai: [
-    { region: "NEW CODE - LOWER PAREL MUMBAI (3rd & 4th May)" }
-  ],
-  Pune: [
-    { region: "Mall of Milenium,Pune (3rd & 4th May)" },
-    { region: "PHOENIX MARKET CITY VIMAN NAGAR, PUNE (3rd & 4th May)" }
-  ],
-  Chennai: [
-    { region: "Phoenix, Chennai (26th & 27th April)" }
-  ]
+ Pune: [
+   { region: "Samsung Experience Store - Mall of Millennium, Pune (3rd & 4th May)" },
+   { region: "Samsung Experience Store - Phoenix Marketcity, Pune (3rd & 4th May)" }
+ ],
+ Bangalore: [
+   { region: "Samsung Experience Store - Koramangala, Bengaluru (3rd & 4th May)" },
+   { region: "Samsung Experience Store - Basaveshwara Nagar, Bengaluru (3rd & 4th May)" },
+   { region: "Samsung Experience Store - Indiranagar, Bengaluru (26th & 27th April)" },
+   { region: "Samsung Opera House, Bengaluru (26th & 27th April)" },
+   { region: "Samsung Experience Store - Mall of Asia, Bengaluru (26th & 27th April)" }
+ ],
+ Chandigarh: [
+   { region: "Samsung Experience Store - Elante Mall, Chandigarh (3rd & 4th May)" },
+   { region: "Samsung Experience Store - Sector 22, Chandigarh (26th & 27th April)" }
+ ],
+ Mohali: [
+   { region: "Samsung Experience Store - CP67 Mall, Mohali (3rd & 4th May)" }
+ ],
+ Surat: [
+   { region: "Samsung Experience Store - IBC, Surat (3rd & 4th May)" }
+ ],
+ Delhi: [
+   { region: "Samsung Experience Store - Connaught Place, Delhi (3rd & 4th May)" },
+   { region: "Samsung Experience Store - South Extension II, Delhi (3rd & 4th May)" },
+   { region: "Samsung Experience Store - Select Citywalk, Saket, Delhi (3rd & 4th May)" },
+   { region: "Samsung Experience Store - Ambience Vasant Kunj, Delhi (26th & 27th April)" }
+ ],
+ Ahmedabad: [
+   { region: "Samsung Experience Store - Navrangpura, Ahmedabad (3rd & 4th May)" },
+   { region: "Samsung Experience Store - Palladium, Ahmedabad (26th & 27th April)" }
+ ],
+ Mumbai: [
+   { region: "Samsung Experience Store - Phoenix Palladium, Lower Parel, Mumbai (3rd & 4th May)" }
+ ],
+ Chennai: [
+   { region: "Samsung Experience Store - Phoenix MarketCity, Chennai (26th & 27th April)" }
+ ],
+ Hyderabad: [
+   { region: "Samsung Experience Store - Inorbit Mall, Hyderabad (26th & 27th April)" }
+ ],
+ Lucknow: [
+   { region: "Samsung Experience Store - Lulu Mall, Lucknow (26th & 27th April)" }
+ ],
+ Gurgaon: [
+   { region: "Samsung Experience Store - Cyberhub, Gurugram (26th & 27th April)" }
+ ],
+ Trivandrum: [
+   { region: "Samsung Experience Store - Lulu Mall, Trivandrum (26th & 27th April)" }
+ ],
+ Kolkata: [
+   { region: "Samsung Experience Store - South City Mall, Kolkata (26th & 27th April)" },
+   { region: "Samsung Experience Store - Park Street, Kolkata (26th & 27th April)" }
+ ]
 };
 
 

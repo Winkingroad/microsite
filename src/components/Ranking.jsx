@@ -7,6 +7,7 @@ import { format } from 'date-fns';
 import bgImage from '../assets/website banner bg.png'; // ✅ import background image
 
 const locations = {
+
   Delhi: [
     { region: "Connaught Place, Delhi" },
     { region: "Ambience Mall, Vasant Kunj" },
@@ -48,6 +49,7 @@ const locations = {
     { region: "Lulu Mall, Lucknow" }
   ]
 };
+
 
 
 

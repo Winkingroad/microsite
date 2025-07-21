@@ -3,59 +3,47 @@ import arrow from '../assets/rightarrow.png';
 
 const locations = {
   Delhi: [
-    { region: "Ambience Vasant Kunj (26th & 27th April)" },
-    { region: "CONNAUGHT PLACE, DELHI (3rd & 4th May)" },
-    { region: "SOUTH-EX, DELHI (3rd & 4th May)" },
-    { region: "NEW CODE - SELECT CITYWALK (3rd & 4th May)" }
-  ],
-  Gurgaon: [
-    { region: "Cyber Hub, Gurgaon (26th & 27th April)" }
-  ],
-  Trivandrum: [
-    { region: "Lulu Trivandrum (26th & 27th April)" }
-  ],
-  Kolkata: [
-    { region: "South City Kolkata (26th & 27th April)" },
-    { region: "PARK STREET, KOLKATA (26th & 27th April)" }
+    { region: "Connaught Place, Delhi (29th & 30th July)" },
+    { region: "Ambience Mall, Vasant Kunj (29th & 30th July)" },
+    { region: "South Extension, Delhi (6th & 7th August)" }
   ],
   Chandigarh: [
-    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B) (26th & 27th April)" },
-    { region: "ELANTE MALL, CHANDIGARH (3rd & 4th May)" }
-  ],
-  Ahmedabad: [
-    { region: "Palladium Mall, Ahmedabad (26th & 27th April)" },
-    { region: "VTech NxtGen Retails LLP (Vijay Cross Road  Navrangpura) (3rd & 4th May)" }
-  ],
-  Bangalore: [
-    { region: "Samsung Experience Store - Concepts Inc - Indiranagar (26th & 27th April)" },
-    { region: "OPERA HOUSE BENGALURU (26th & 27th April)" },
-    { region: "Mall Of Asia, Bengaluru (26th & 27th April)" },
-    { region: "Innesfree Koramangala (3rd & 4th May)" },
-    { region: "INNESFREE BASAVESHWARA NAGAR (3rd & 4th May)" }
-  ],
-  Hyderabad: [
-    { region: "Inorbit Mall, Hyderabad (26th & 27th April)" }
-  ],
-  Lucknow: [
-    { region: "Lulu Mall, Lucknow (26th & 27th April)" }
-  ],
-  Mohali: [
-    { region: "CP67 MOHALI (3rd & 4th May)" }
-  ],
-  Surat: [
-    { region: "IBC, SURAT (3rd & 4th May)" }
-  ],
-  Mumbai: [
-    { region: "NEW CODE - LOWER PAREL MUMBAI (3rd & 4th May)" }
+    { region: "Elante Mall, Chandigarh (29th & 30th July)" },
+    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B) (4th & 5th August)" }
   ],
   Pune: [
-    { region: "Mall of Milenium,Pune (3rd & 4th May)" },
-    { region: "PHOENIX MARKET CITY VIMAN NAGAR, PUNE (3rd & 4th May)" }
+    { region: "Mall of Milenium, Pune (29th & 30th July)" }
+  ],
+  Mumbai: [
+    { region: "Phoenix Palladium, Lower Parel, Mumbai (29th & 30th July)" },
+    { region: "Swiftlink, Andheri (4th & 5th August)" },
+    { region: "Sky City by Oberoi Realty, Borivali (4th & 5th August)" }
+  ],
+  Bengaluru: [
+    { region: "Basaveshwara Nagar, Bengaluru (29th & 30th July)" }
+  ],
+  Kolkata: [
+    { region: "Park Street, Kolkata (29th & 30th July)" },
+    { region: "South City, Kolkata (3rd & 4th August)" }
   ],
   Chennai: [
-    { region: "Phoenix, Chennai (26th & 27th April)" }
+    { region: "Phoenix Market City, Chennai (30th & 31st July)" },
+    { region: "VR Mall, Chennai (4th & 5th August)" }
+  ],
+  Surat: [
+    { region: "IBC, Surat (4th & 5th August)" }
+  ],
+  Ahmedabad: [
+    { region: "Palladium Mall, Ahmedabad (4th & 5th August)" }
+  ],
+  Mohali: [
+    { region: "CP67, Mohali (5th & 6th August)" }
+  ],
+  Lucknow: [
+    { region: "Lulu Mall, Lucknow (10th & 11th August)" }
   ]
 };
+
 
 
 const Register = () => {

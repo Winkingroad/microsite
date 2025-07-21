@@ -8,59 +8,47 @@ import bgImage from '../assets/website banner bg.png'; // ✅ import background 
 
 const locations = {
   Delhi: [
-    { region: "Ambience Vasant Kunj" },
-    { region: "CONNAUGHT PLACE, DELHI" },
-    { region: "SOUTH-EX, DELHI" },
-    { region: "NEW CODE - SELECT CITYWALK" }
-  ],
-  Gurgaon: [
-    { region: "Cyber Hub, Gurgaon" }
-  ],
-  Trivandrum: [
-    { region: "Lulu Trivandrum" }
-  ],
-  Kolkata: [
-    { region: "South City Kolkata" },
-    { region: "PARK STREET, KOLKATA" }
+    { region: "Connaught Place, Delhi" },
+    { region: "Ambience Mall, Vasant Kunj" },
+    { region: "South Extension, Delhi" }
   ],
   Chandigarh: [
-    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B)" },
-    { region: "ELANTE MALL, CHANDIGARH" }
+    { region: "Elante Mall, Chandigarh" },
+    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B)" }
+  ],
+  Pune: [
+    { region: "Mall of Milenium, Pune" }
+  ],
+  Mumbai: [
+    { region: "Phoenix Palladium, Lower Parel, Mumbai" },
+    { region: "Swiftlink Andheri" },
+    { region: "Sky City by Oberoi Realty, Borivali" }
+  ],
+  Bengaluru: [
+    { region: "Basaveshwara Nagar, Bengaluru" }
+  ],
+  Kolkata: [
+    { region: "Park Street, Kolkata" },
+    { region: "South City, Kolkata" }
+  ],
+  Chennai: [
+    { region: "Phoenix Market City, Chennai" },
+    { region: "VR Mall, Chennai" }
+  ],
+  Surat: [
+    { region: "IBC, Surat" }
   ],
   Ahmedabad: [
-    { region: "Palladium Mall, Ahmedabad" },
-    { region: "VTech NxtGen Retails LLP (Vijay Cross Road  Navrangpura)" }
+    { region: "Palladium Mall, Ahmedabad" }
   ],
-  Bangalore: [
-    { region: "Samsung Experience Store - Concepts Inc - Indiranagar" },
-    { region: "OPERA HOUSE BENGALURU" },
-    { region: "Mall Of Asia, Bengaluru" },
-    { region: "Innesfree Koramangala" },
-    { region: "INNESFREE BASAVESHWARA NAGAR" }
-  ],
-  Hyderabad: [
-    { region: "Inorbit Mall, Hyderabad" }
+  Mohali: [
+    { region: "CP67, Mohali" }
   ],
   Lucknow: [
     { region: "Lulu Mall, Lucknow" }
-  ],
-  Mohali: [
-    { region: "CP67 MOHALI" }
-  ],
-  Surat: [
-    { region: "IBC, SURAT" }
-  ],
-  Mumbai: [
-    { region: "NEW CODE - LOWER PAREL MUMBAI" }
-  ],
-  Pune: [
-    { region: "Mall of Milenium,Pune" },
-    { region: "PHOENIX MARKET CITY VIMAN NAGAR, PUNE" }
-  ],
-  Chennai: [
-    { region: "Phoenix, Chennai" }
   ]
 };
+
 
 
 

@@ -54,17 +54,22 @@ function HomePage() {
 
         {/* Description */}
         <p className="max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
-          We are thrilled to introduce an exclusive gaming event at Samsung Experience Stores, featuring our flagship device the Samsung Galaxy Z Fold7 built to take mobile gaming to the next level. This is a 2 week Gamethon invites everyone to dive in, explore, and be part of a truly immersive adventure.
+          We are coming back, bringing the #PlayGalaxy experience to life once again this time powered by our new hero device, the Samsung Galaxy Z Fold7, built to push mobile gaming to the next level.
 
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
-         From 29th July to 11th August 2025, #PlayGalaxy will light up 18 Samsung Experience Stores across 11 cities, offering endless opportunities to jump into the action. Come, be a part of this exciting journey.
+         This 2-week Gamethon invites everyone to dive in, explore, and be part of a truly immersive adventure.
+
 
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg mt-0 text-center">
-          Get ready to play, discover, and connect with the power of #PlayGalaxy #SamsungExperienceStores
+          From 29th July to 11th August 2025, #PlayGalaxy will light up 18 Samsung Experience Stores across 11 cities, offering endless opportunities to jump into the action. Come, be a part of this exciting journey.
+        </p>
+
+        <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg mt-0 text-center">
+          Get ready to play, discover, and connect with the power of #PlayGalaxy #SamsungExperienceStores.
         </p>
 
         {/* Buttons */}

@@ -11,7 +11,7 @@ const locations = {
   Delhi: [
     { region: "Connaught Place, Delhi" },
     { region: "Ambience Mall, Vasant Kunj" },
-    { region: "South Extension, Delhi" }
+    { region: "Samsung Experience Store - Select City Walk Saket, Delhi" }
   ],
   Chandigarh: [
     { region: "Elante Mall, Chandigarh" },

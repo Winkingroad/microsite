@@ -4,7 +4,7 @@ import './index.css'; // Ensure Tailwind CSS is imported here
 import bgImage from './assets/IMG_2240.png';
 import samsungLogo from './assets/Samsung White.png';
 import playlogo from './assets/Play Galaxy White.png';
-import galaxyCup from './assets/website banner.png';
+import galaxyCup from './assets/IMG_2238.png';
 import Navbar from './components/Navbar';
 import RegisterForm from './components/Resgister';
 import Ranking from './components/Ranking';

@@ -6,7 +6,8 @@ const locations = {
     { region: "Connaught Place, Delhi (29th & 30th July)" },
     { region: "Ambience Mall, Vasant Kunj (29th & 30th July)" },
     { region: "South Extension, Delhi (6th & 7th August)" },
-    { region: "Select Citywalk, Delhi (30th & 31st August)" } // New
+    { region: "Select Citywalk, Delhi (30th & 31st August)" }, // New
+    { region: "Samsung Experience Store - Select City Walk Saket (6th & 7th August)" }
   ],
   Chandigarh: [
     { region: "Elante Mall, Chandigarh (29th & 30th July)" },

@@ -5,14 +5,16 @@ const locations = {
   Delhi: [
     { region: "Connaught Place, Delhi (29th & 30th July)" },
     { region: "Ambience Mall, Vasant Kunj (29th & 30th July)" },
-    { region: "South Extension, Delhi (6th & 7th August)" }
+    { region: "South Extension, Delhi (6th & 7th August)" },
+    { region: "Select Citywalk, Delhi (30th & 31st August)" } // New
   ],
   Chandigarh: [
     { region: "Elante Mall, Chandigarh (29th & 30th July)" },
     { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B) (4th & 5th August)" }
   ],
   Pune: [
-    { region: "Mall of Milenium, Pune (29th & 30th July)" }
+    { region: "Mall of Milenium, Pune (29th & 30th July)" },
+    { region: "Phoenix Market City Viman Nagar, Pune (30th & 31st August)" } // New
   ],
   Mumbai: [
     { region: "Phoenix Palladium, Lower Parel, Mumbai (29th & 30th July)" },
@@ -20,7 +22,9 @@ const locations = {
     { region: "Sky City by Oberoi Realty, Borivali (4th & 5th August)" }
   ],
   Bengaluru: [
-    { region: "Basaveshwara Nagar, Bengaluru (29th & 30th July)" }
+    { region: "Basaveshwara Nagar, Bengaluru (29th & 30th July)" },
+    { region: "Opera House, Bengaluru (30th & 31st August)" }, // New
+    { region: "Mall of Asia, Bengaluru (30th & 31st August)" } // New
   ],
   Kolkata: [
     { region: "Park Street, Kolkata (29th & 30th July)" },
@@ -41,8 +45,18 @@ const locations = {
   ],
   Lucknow: [
     { region: "Lulu Mall, Lucknow (10th & 11th August)" }
+  ],
+  Hyderabad: [
+    { region: "Inorbit Mall, Hyderabad (30th & 31st August)" } // New
+  ],
+  Trivandrum: [
+    { region: "Lulu Trivandrum (30th & 31st August)" } // New
+  ],
+  Gurgaon: [
+    { region: "Cyber Hub, Gurgaon (30th & 31st August)" } // New
   ]
 };
+
 
 
 

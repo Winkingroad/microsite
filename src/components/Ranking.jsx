@@ -7,18 +7,19 @@ import { format } from 'date-fns';
 import bgImage from '../assets/website banner bg.png'; // ✅ import background image
 
 const locations = {
-
   Delhi: [
     { region: "Connaught Place, Delhi" },
     { region: "Ambience Mall, Vasant Kunj" },
-    { region: "South Extension, Delhi" }
+    { region: "South Extension, Delhi" },
+    { region: "Select Citywalk, Delhi" } // New
   ],
   Chandigarh: [
     { region: "Elante Mall, Chandigarh" },
     { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B)" }
   ],
   Pune: [
-    { region: "Mall of Milenium, Pune" }
+    { region: "Mall of Milenium, Pune" },
+    { region: "Phoenix Market City Viman Nagar, Pune" } // New
   ],
   Mumbai: [
     { region: "Phoenix Palladium, Lower Parel, Mumbai" },
@@ -26,7 +27,9 @@ const locations = {
     { region: "Sky City by Oberoi Realty, Borivali" }
   ],
   Bengaluru: [
-    { region: "Basaveshwara Nagar, Bengaluru" }
+    { region: "Basaveshwara Nagar, Bengaluru" },
+    { region: "Opera House, Bengaluru" }, // New
+    { region: "Mall of Asia, Bengaluru" } // New
   ],
   Kolkata: [
     { region: "Park Street, Kolkata" },
@@ -47,11 +50,17 @@ const locations = {
   ],
   Lucknow: [
     { region: "Lulu Mall, Lucknow" }
+  ],
+  Hyderabad: [
+    { region: "Inorbit Mall, Hyderabad" } // New
+  ],
+  Trivandrum: [
+    { region: "Lulu Trivandrum" } // New
+  ],
+  Gurgaon: [
+    { region: "Cyber Hub, Gurgaon" } // New
   ]
 };
-
-
-
 
 
 const Ranking = () => {

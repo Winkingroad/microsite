@@ -59,13 +59,15 @@ function HomePage() {
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
-         This 2-week Gamethon invites everyone to dive in, explore, and be part of a truly immersive adventure.
+         This Gamethon invites everyone to dive in, explore, and be part of a truly immersive adventure.
+
 
 
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg mt-0 text-center">
-          From 29th July to 11th August 2025, #PlayGalaxy will light up 18 Samsung Experience Stores across 11 cities, offering endless opportunities to jump into the action. Come, be a part of this exciting journey.
+          From 29th July to 31st August 2025, #PlayGalaxy will light up 25 Samsung Experience Stores across 14 cities, offering endless opportunities to jump into the action. Come, be a part of this exciting journey.
+
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg mt-0 text-center">

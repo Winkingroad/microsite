@@ -11,7 +11,7 @@ const locations = {
     { region: "Connaught Place, Delhi" },
     { region: "Ambience Mall, Vasant Kunj" },
     { region: "South Extension, Delhi" },
-    { region: "Select Citywalk, Delhi" }, // New
+    // { region: "Select Citywalk, Delhi" }, // New
     { region: "Samsung Experience Store - Select City Walk Saket, Delhi" }
   ],
   Chandigarh: [
@@ -29,7 +29,7 @@ const locations = {
   ],
   Bengaluru: [
     { region: "Basaveshwara Nagar, Bengaluru" },
-    { region: "Opera House, Bengaluru" }, // New
+    // { region: "Opera House, Bengaluru" }, // New
     { region: "Mall of Asia, Bengaluru" } // New
   ],
   Kolkata: [

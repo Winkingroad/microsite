@@ -6,7 +6,7 @@ const locations = {
     { region: "Connaught Place, Delhi (29th & 30th July)" },
     { region: "Ambience Mall, Vasant Kunj (29th & 30th July)" },
     { region: "South Extension, Delhi (6th & 7th August)" },
-    { region: "Select Citywalk, Delhi (30th & 31st August)" }, // New
+    // { region: "Select Citywalk, Delhi (30th & 31st August)" }, // New
     { region: "Samsung Experience Store - Select City Walk Saket (6th & 7th August)" }
   ],
   Chandigarh: [
@@ -24,7 +24,7 @@ const locations = {
   ],
   Bengaluru: [
     { region: "Basaveshwara Nagar, Bengaluru (29th & 30th July)" },
-    { region: "Opera House, Bengaluru (30th & 31st August)" }, // New
+    // { region: "Opera House, Bengaluru (30th & 31st August)" }, // New
     { region: "Mall of Asia, Bengaluru (30th & 31st August)" } // New
   ],
   Kolkata: [

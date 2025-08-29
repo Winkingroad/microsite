@@ -54,7 +54,7 @@ function HomePage() {
 
         {/* Description */}
         <p className="max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
-          We are coming back, bringing the #PlayGalaxy experience to life once again this time powered by our new hero device, the Samsung Galaxy Z Fold7, built to push mobile gaming to the next level.
+  We are coming back, bringing the #PlayGalaxy experience to life once again this time powered by our new hero device, the Samsung Galaxy Z Fold7, built to push mobile gaming to the next level.
 
         </p>
 
@@ -66,12 +66,12 @@ function HomePage() {
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg mt-0 text-center">
-          From 29th July to 31st August 2025, #PlayGalaxy will light up 25 Samsung Experience Stores across 14 cities, offering endless opportunities to jump into the action. Come, be a part of this exciting journey.
+          From 29th July to 20th September 2025, #PlayGalaxy will light up 25 Samsung Experience Stores across 14 cities, offering endless opportunities to jump into the action. Come, be a part of this exciting journey.
 
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg mt-0 text-center">
-          Get ready to play, discover, and connect with the power of #PlayGalaxy #SamsungExperienceStores.
+        Get ready to play, discover, and connect with the power of #PlayGalaxy #SamsungExperienceStores.
         </p>
 
         {/* Buttons */}

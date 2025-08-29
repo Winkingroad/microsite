@@ -4,7 +4,7 @@ import arrow from '../assets/rightarrow.png';
 const locations = {
   Delhi: [
     { region: "Connaught Place, Delhi (29th & 30th July)" },
-    { region: "Ambience Mall, Vasant Kunj (29th & 30th July)" },
+    { region: "Ambience Mall, Vasant Kunj (19th & 20th September )" },
     { region: "South Extension, Delhi (6th & 7th August)" },
     // { region: "Select Citywalk, Delhi (30th & 31st August)" }, // New
     { region: "Samsung Experience Store - Select City Walk Saket (6th & 7th August)" }
@@ -25,7 +25,7 @@ const locations = {
   Bengaluru: [
     { region: "Basaveshwara Nagar, Bengaluru (29th & 30th July)" },
     // { region: "Opera House, Bengaluru (30th & 31st August)" }, // New
-    { region: "Mall of Asia, Bengaluru (30th & 31st August)" } // New
+    { region: "Mall of Asia, Bengaluru (19th & 20th September)" } // New
   ],
   Kolkata: [
     { region: "Park Street, Kolkata (29th & 30th July)" },

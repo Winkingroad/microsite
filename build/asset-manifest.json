@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.257e7b5a.css",
+    "main.js": "/static/js/main.03a7d096.js",
+    "static/js/453.4fc8f72d.chunk.js": "/static/js/453.4fc8f72d.chunk.js",
+    "static/media/IMG_2240.png": "/static/media/IMG_2240.cc31f6d52711e1fd35e8.png",
+    "static/media/website banner bg.png": "/static/media/website banner bg.cc31f6d52711e1fd35e8.png",
+    "static/media/IMG_2238.png": "/static/media/IMG_2238.fc668304a55bfe7507f9.png",
+    "static/media/Thumbnail.png": "/static/media/Thumbnail.a49558d8b2001b6cf5d7.png",
+    "static/media/calendar.png": "/static/media/calendar.01684ce60a05713fa2af.png",
+    "static/media/Play Galaxy White.png": "/static/media/Play Galaxy White.4aef6a62eb886b51fa76.png",
+    "static/media/Samsung White.png": "/static/media/Samsung White.6d30d235eed480ee0d7c.png",
+    "index.html": "/index.html",
+    "main.257e7b5a.css.map": "/static/css/main.257e7b5a.css.map",
+    "main.03a7d096.js.map": "/static/js/main.03a7d096.js.map",
+    "453.4fc8f72d.chunk.js.map": "/static/js/453.4fc8f72d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.257e7b5a.css",
+    "static/js/main.03a7d096.js"
+  ]
+}

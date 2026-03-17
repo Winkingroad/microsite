@@ -16,11 +16,9 @@ function Navbar() {
       <nav
         className="w-full py-4 px-4 md:px-6 flex justify-between items-center shadow-custom z-20 relative"
         style={{
-<<<<<<< HEAD
+
           background: 'radial-gradient(circle, #5a24d2 0%, #000000 100%)',
-=======
-          background: 'radial-gradient(circle, #002447 0%, #000000 100%)',
->>>>>>> 375f745075ea72d7a3b8270f7310432d1c2ce25a
+
         }}
       >
         {/* Mobile Menu Button */}
@@ -80,11 +78,7 @@ function Navbar() {
           isDrawerOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         style={{
-<<<<<<< HEAD
           background: 'radial-gradient(circle, #5a24d2 0%, #000000 100%)',
-=======
-          background: 'radial-gradient(circle, #002447 0%, #000000 100%)',
->>>>>>> 375f745075ea72d7a3b8270f7310432d1c2ce25a
         }}
       >
         {/* Drawer Header */}

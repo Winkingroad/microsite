@@ -3,58 +3,98 @@ import arrow from '../assets/rightarrow.png';
 
 const locations = {
   Delhi: [
-    { region: "Connaught Place, Delhi (29th & 30th July)" },
-    { region: "Ambience Mall, Vasant Kunj (19th & 20th September )" },
-    { region: "South Extension, Delhi (6th & 7th August)" },
-    // { region: "Select Citywalk, Delhi (30th & 31st August)" }, // New
-    { region: "Samsung Experience Store - Select City Walk Saket (6th & 7th August)" }
+    { region: "The British Motor Car Company Pvt Ltd (21 Mar 2026)" },
+    { region: "Parama Retail Solutions (India) Pvt Ltd (29 Mar 2026)" },
+    { region: "Spectra & Star Convergence Limited (05 Apr 2026)" },
+    { region: "Star Mobitel Ltd South Ex (19 Apr 2026)" }
   ],
-  Chandigarh: [
-    { region: "Elante Mall, Chandigarh (29th & 30th July)" },
-    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B) (4th & 5th August)" }
-  ],
-  Pune: [
-    { region: "Mall of Milenium, Pune (29th & 30th July)" },
-    { region: "Phoenix Market City Viman Nagar, Pune (30th & 31st August)" } // New
-  ],
-  Mumbai: [
-    { region: "Phoenix Palladium, Lower Parel, Mumbai (29th & 30th July)" },
-    { region: "Swiftlink, Andheri (4th & 5th August)" },
-    { region: "Sky City by Oberoi Realty, Borivali (4th & 5th August)" }
-  ],
-  Bengaluru: [
-    { region: "Basaveshwara Nagar, Bengaluru (29th & 30th July)" },
-    // { region: "Opera House, Bengaluru (30th & 31st August)" }, // New
-    { region: "Mall of Asia, Bengaluru (19th & 20th September)" } // New
-  ],
-  Kolkata: [
-    { region: "Park Street, Kolkata (29th & 30th July)" },
-    { region: "South City, Kolkata (3rd & 4th August)" }
-  ],
-  Chennai: [
-    { region: "Phoenix Market City, Chennai (30th & 31st July)" },
-    { region: "VR Mall, Chennai (4th & 5th August)" }
-  ],
-  Surat: [
-    { region: "IBC, Surat (4th & 5th August)" }
-  ],
-  Ahmedabad: [
-    { region: "Palladium Mall, Ahmedabad (4th & 5th August)" }
-  ],
-  Mohali: [
-    { region: "CP67, Mohali (5th & 6th August)" }
-  ],
-  Lucknow: [
-    { region: "Lulu Mall, Lucknow (10th & 11th August)" }
-  ],
-  Hyderabad: [
-    { region: "Inorbit Mall, Hyderabad (30th & 31st August)" } // New
-  ],
-  Trivandrum: [
-    { region: "Lulu Trivandrum (30th & 31st August)" } // New
-  ],
+
   Gurgaon: [
-    { region: "Cyber Hub, Gurgaon (30th & 31st August)" } // New
+    { region: "Spectra & Star Convergence Limited (21 Mar 2026)" },
+    { region: "Spectra & Star Convergence Limited (22 Mar 2026)" }
+  ],
+
+  Chandigarh: [
+    { region: "Electro Photo Equipments Pvt Ltd (11 Apr 2026)" },
+    { region: "Electro Photo Equipments (Sec-35C) (12 Apr 2026)" },
+    { region: "Anmol Watches & Electronics Pvt Ltd (18 Apr 2026)" },
+    { region: "CP67 Mohali (19 Apr 2026)" }
+  ],
+
+  Pune: [
+    { region: "ABM Delight (04 Apr 2026)" },
+    { region: "Kopa Mall Pune (05 Apr 2026)" },
+    { region: "Orison Retail Viman Nagar (11 Apr 2026)" },
+    { region: "Karuna Management Services Ltd (11 Apr 2026)" },
+    { region: "Mehta Telecom Pvt Ltd (12 Apr 2026)" }
+  ],
+
+  Mumbai: [
+    { region: "Swiftlink Andheri (21 Mar 2026)" },
+    { region: "Palm Beach Galleria (22 Mar 2026)" },
+    { region: "GP Telecom Sky City (28 Mar 2026)" },
+    { region: "Swiftlink Connections Pvt Ltd (Phoenix Kurla) (29 Mar 2026)" },
+    { region: "GP Telecom Pvt Ltd (Inorbit) (04 Apr 2026)" },
+    { region: "Swiftlink Connections Pvt Ltd (Phoenix Lower Parel) (05 Apr 2026)" }
+  ],
+
+  Bengaluru: [
+    { region: "Concepts MOA (22 Mar 2026)" },
+    { region: "Innisfree Ventures (BSW) (28 Mar 2026)" },
+    { region: "Innesfree Retail LLP (Koramangala) (29 Mar 2026)" },
+    { region: "ABM Delight (18 Apr 2026)" }
+  ],
+
+  Kolkata: [
+    { region: "Park Street Kolkata (05 Apr 2026)" },
+    { region: "South City Kolkata (19 Apr 2026)" }
+  ],
+
+  Chennai: [
+    { region: "Ziptech Enterprises Pvt Ltd (28 Mar 2026)" },
+    { region: "Express Chennai (04 Apr 2026)" },
+    { region: "IT World Forum Vijaya Mall (05 Apr 2026)" },
+    { region: "IT World Velachery Phoenix (11 Apr 2026)" },
+    { region: "VR Mall Chennai (12 Apr 2026)" }
+  ],
+
+  Surat: [
+    { region: "Bhatia Communication IBC Cafe (21 Mar 2026)" },
+    { region: "Shivam Sales (22 Mar 2026)" }
+  ],
+
+  Ahmedabad: [
+    { region: "Prince Communication Science City (21 Mar 2026)" },
+    { region: "VTech NxtGen Retails LLP (Palladium) (22 Mar 2026)" },
+    { region: "VTech NxtGen Retails LLP (28 Mar 2026)" },
+    { region: "VTech NxtGen Retails LLP (Ishanpur) (29 Mar 2026)" }
+  ],
+
+  Hyderabad: [
+    { region: "Lake Shore Hyderabad (28 Mar 2026)" },
+    { region: "Inorbit Mall Hyderabad (29 Mar 2026)" }
+  ],
+
+  Jaipur: [
+    { region: "MI Road Jaipur (11 Apr 2026)" },
+    { region: "Shri Shyam Fabrication (12 Apr 2026)" },
+    { region: "Khandelwal Tele Services Pvt Ltd (18 Apr 2026)" },
+    { region: "SS Associates (19 Apr 2026)" }
+  ],
+
+  Indore: [
+    { region: "RM Chemicals Citadel (12 Apr 2026)" },
+    { region: "Krishna Communication MIT (18 Apr 2026)" }
+  ],
+
+  Dehradun: [
+    { region: "Electrophoto Equipments Pvt Ltd (18 Apr 2026)" },
+    { region: "Infiniti Enterprises (19 Apr 2026)" }
+  ],
+
+  Bhubaneswar: [
+    { region: "Cell Net Telelinks Samsung Cafe (04 Apr 2026)" },
+    { region: "Banashree Mobile Samsung Cafe (05 Apr 2026)" }
   ]
 };
 

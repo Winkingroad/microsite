@@ -54,24 +54,25 @@ function HomePage() {
 
         {/* Description */}
         <p className="max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
-  We are coming back, bringing the #PlayGalaxy experience to life once again this time powered by our new hero device, the Samsung Galaxy Z Fold7, built to push mobile gaming to the next level.
+  We are coming back, bringing the #PlayGalaxy experience to life once again, this time bigger, faster, and more immersive than ever, powered by our latest innovation, the Samsung Galaxy S26 Ultra, built to take mobile gaming to the next level.
+
 
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
-         This Gamethon invites everyone to dive in, explore, and be part of a truly immersive adventure.
+         From 21st March to 19th April 2026, #PlayGalaxy will take over 50 Samsung Experience Stores across 15 cities in India, giving gamers everywhere the chance to jump into the action, showcase their skills, and rise through the ranks.
 
 
 
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg mt-0 text-center">
-          From 29th July to 20th September 2025, #PlayGalaxy will light up 25 Samsung Experience Stores across 14 cities, offering endless opportunities to jump into the action. Come, be a part of this exciting journey.
+          As the journey unfolds, top players from each city will advance to City Finals, where the best of the best will compete for ultimate bragging rights.
 
         </p>
 
         <p className="max-w-md sm:max-w-lg md:max-w-xl text-sm sm:text-base md:text-lg mt-0 text-center">
-        Get ready to play, discover, and connect with the power of #PlayGalaxy #SamsungExperienceStores.
+        Get ready to play, compete, and connect with the power of #PlayGalaxy #SamsungExperienceStores.
         </p>
 
         {/* Buttons */}

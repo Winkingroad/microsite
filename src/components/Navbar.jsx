@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import playlogo from '../assets/Play Galaxy White.png';
-import samsungLogo from '../assets/Samsung White.png';
 
 function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -14,11 +13,9 @@ function Navbar() {
   return (
     <>
       <nav
-        className="w-full py-4 px-4 md:px-6 flex justify-between items-center shadow-custom z-20 relative"
+        className="w-full py-4 px-4 md:px-6 flex items-center shadow-custom z-20 relative"
         style={{
-
-          background: 'radial-gradient(circle, #5a24d2 0%, #000000 100%)',
-
+          background: 'radial-gradient(circle, #302e2e 0%, #000000 100%)',
         }}
       >
         {/* Mobile Menu Button */}
@@ -32,7 +29,6 @@ function Navbar() {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               strokeLinecap="round"
@@ -45,27 +41,28 @@ function Navbar() {
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-12 ml-8">
-          <Link to="/" className="text-white text-xl hover:text-gray-300 transition-colors">
+          <Link to="/" className="text-white text-xl hover:text-gray-300">
             Home
           </Link>
-          <Link to="/register" className="text-white text-xl hover:text-gray-300 transition-colors">
+          <Link to="/register" className="text-white text-xl hover:text-gray-300">
             Register
           </Link>
-          <Link to="/ranking" className="text-white text-xl hover:text-gray-300 transition-colors">
+          <Link to="/ranking" className="text-white text-xl hover:text-gray-300">
             Rankings
           </Link>
         </div>
 
-        {/* Logos */}
-        <div className="flex items-center space-x-4 md:space-x-8">
-          <img src={playlogo} className="h-8 md:h-14 mr-24" alt="Play Galaxy Logo" />
-        </div>
-        <div className="flex items-center space-x-4 md:space-x-8">
-          <img src={samsungLogo} className="h-5 md:h-8" alt="Samsung Logo" />
+        {/* PlayGalaxy Logo */}
+        <div className="flex-1 flex justify-center md:justify-center">
+          <img
+            src={playlogo}
+            className="h-8 md:h-14 md:absolute md:left-1/2 md:-translate-x-1/2 bottom-0"
+            alt="Play Galaxy Logo"
+          />
         </div>
       </nav>
 
-      {/* Mobile Side Drawer */}
+      {/* Mobile Backdrop */}
       <div
         className={`fixed inset-0 bg-black bg-opacity-50 z-30 transition-opacity duration-300 md:hidden ${
           isDrawerOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -73,40 +70,27 @@ function Navbar() {
         onClick={toggleDrawer}
       />
 
+      {/* Mobile Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-blue-900 transform transition-transform duration-300 ease-in-out z-40 md:hidden ${
+        className={`fixed top-0 left-0 h-full w-64 transform transition-transform duration-300 z-40 md:hidden ${
           isDrawerOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         style={{
           background: 'radial-gradient(circle, #5a24d2 0%, #000000 100%)',
         }}
       >
-        {/* Drawer Header */}
         <div className="p-4 border-b border-blue-800">
           <img src={playlogo} className="h-8 mx-auto" alt="Play Galaxy Logo" />
         </div>
 
-        {/* Drawer Links */}
         <div className="flex flex-col p-4 space-y-4">
-          <Link
-            to="/"
-            className="text-white text-lg font-semibold hover:text-gray-300 transition-colors"
-            onClick={toggleDrawer}
-          >
+          <Link to="/" className="text-white text-lg font-semibold" onClick={toggleDrawer}>
             Home
           </Link>
-          <Link
-            to="/register"
-            className="text-white text-lg font-semibold hover:text-gray-300 transition-colors"
-            onClick={toggleDrawer}
-          >
+          <Link to="/register" className="text-white text-lg font-semibold" onClick={toggleDrawer}>
             Register
           </Link>
-          <Link
-            to="/ranking"
-            className="text-white text-lg font-semibold hover:text-gray-300 transition-colors"
-            onClick={toggleDrawer}
-          >
+          <Link to="/ranking" className="text-white text-lg font-semibold" onClick={toggleDrawer}>
             Rankings
           </Link>
         </div>

@@ -54,7 +54,7 @@ function HomePage() {
 
         {/* Description */}
         <p className="max-w-md sm:max-w-lg md:max-w-4xl text-sm sm:text-base md:text-lg mt-0 text-center">
-  We are coming back, bringing the #PlayGalaxy experience to life once again, this time bigger, faster, and more immersive than ever, powered by our latest innovation, the Samsung Galaxy S26 Ultra, built to take mobile gaming to the next level.
+  We are coming back, bringing the #PlayGalaxy experience to life once again, this time bigger, faster, and more immersive than ever, powered by our latest innovation, the Galaxy S26 Ultra, built to take mobile gaming to the next level.
 
 
         </p>

@@ -4,65 +4,92 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { ChevronDown } from 'lucide-react';
 import Calendar from '../assets/calendar.png';
 import { format } from 'date-fns';
-import bgImage from '../assets/website banner bg.png'; // ✅ import background image
+import bgImage from '../assets/website banner bg.png';
 
 const locations = {
   Delhi: [
-    { region: "Connaught Place, Delhi" },
-    { region: "Ambience Mall, Vasant Kunj" },
-    { region: "South Extension, Delhi" },
-    // { region: "Select Citywalk, Delhi" }, // New
-    { region: "Samsung Experience Store - Select City Walk Saket, Delhi" }
-  ],
-  Chandigarh: [
-    { region: "Elante Mall, Chandigarh" },
-    { region: "ELECTROPHOTO EQUIPMENTS PRIVATE LIMITED - (SEC.-22 B)" }
-  ],
-  Pune: [
-    { region: "Mall of Milenium, Pune" },
-    { region: "Phoenix Market City Viman Nagar, Pune" } // New
-  ],
-  Mumbai: [
-    { region: "Phoenix Palladium, Lower Parel, Mumbai" },
-    { region: "Swiftlink Andheri" },
-    { region: "Sky City by Oberoi Realty, Borivali" }
-  ],
-  Bengaluru: [
-    { region: "Basaveshwara Nagar, Bengaluru" },
-    // { region: "Opera House, Bengaluru" }, // New
-    { region: "Mall of Asia, Bengaluru" } // New
-  ],
-  Kolkata: [
-    { region: "Park Street, Kolkata" },
-    { region: "South City, Kolkata" }
-  ],
-  Chennai: [
-    { region: "Phoenix Market City, Chennai" },
-    { region: "VR Mall, Chennai" }
-  ],
-  Surat: [
-    { region: "IBC, Surat" }
-  ],
-  Ahmedabad: [
-    { region: "Palladium Mall, Ahmedabad" }
-  ],
-  Mohali: [
-    { region: "CP67, Mohali" }
-  ],
-  Lucknow: [
-    { region: "Lulu Mall, Lucknow" }
-  ],
-  Hyderabad: [
-    { region: "Inorbit Mall, Hyderabad" } // New
-  ],
-  Trivandrum: [
-    { region: "Lulu Trivandrum" } // New
+    { region: "Samsung Experience Store Connaught Place" },
+    { region: "Samsung Experience Store Select CityWalk" },
+    { region: "Samsung Experience Store Ambience Mall" },
+    { region: "Samsung Experience Store South Extension II" }
   ],
   Gurgaon: [
-    { region: "Cyber Hub, Gurgaon" } // New
+    { region: "Samsung Experience Store Cyberhub" },
+    { region: "Samsung Experience Store Bestech Mall" }
+  ],
+  Ahmedabad: [
+    { region: "Samsung Experience Store Science City" },
+    { region: "Samsung Experience Store Bhagwan Nagar" },
+    { region: "Samsung Experience Store Palladium Ahmedabad" },
+    { region: "Samsung Experience Store Navrangpura" }
+  ],
+  Surat: [
+    { region: "Samsung Experience Store IBC Surat" },
+    { region: "Samsung Experience Store Adajan" }
+  ],
+  Mumbai: [
+    { region: "Samsung Experience Store SkyCity Mall" },
+    { region: "Samsung Experience Store Andheri West" },
+    { region: "Samsung Experience Store Kurla" },
+    { region: "Samsung Experience Store Inorbit Mall" },
+    { region: "Samsung Experience Store Phoenix Palladium" },
+    { region: "Samsung Experience Store Palm Beach" }
+  ],
+  Bengaluru: [
+    { region: "Samsung Experience Store Basaveshwara Nagar" },
+    { region: "Samsung Experience Store Mall of Asia" },
+    { region: "Samsung Experience Store Koramangala" },
+    { region: "Samsung Experience Store Brigade Road" }
+  ],
+  Hyderabad: [
+    { region: "Samsung Experience Store Lake Shore" },
+    { region: "Samsung Experience Store Inorbit Mall" }
+  ],
+  Chennai: [
+    { region: "Samsung Experience Store Adyar" },
+    { region: "Samsung Experience Store Express Avenue" },
+    { region: "Samsung Experience Store Nexus Vijaya Mall" },
+    { region: "Samsung Experience Store Phoenix Velachery" },
+    { region: "Samsung Experience Store VR Mall" }
+  ],
+  Pune: [
+    { region: "Samsung Experience Store Viman Nagar" },
+    { region: "Samsung Experience Store Mall of Millennium" },
+    { region: "Samsung Experience Store Kopa Mall" },
+    { region: "Samsung Experience Store Phoenix MarketCity" },
+    { region: "Samsung Experience Store Vishrantwadi" }
+  ],
+  Bhubaneswar: [
+    { region: "Samsung Experience Store Patia" },
+    { region: "Samsung Experience Store Khorda" }
+  ],
+  Kolkata: [
+    { region: "Samsung Experience Store Park Street" },
+    { region: "Samsung Experience Store South City Mall" }
+  ],
+  Chandigarh: [
+    { region: "Samsung Experience Store Elante Mall" },
+    { region: "Samsung Experience Store Sector 35C" },
+    { region: "Samsung Experience Store Manimajra" }
+  ],
+  Mohali: [
+    { region: "Samsung Experience Store CP67 Mall" }
+  ],
+  Jaipur: [
+    { region: "Samsung Experience Store MI Road" },
+    { region: "Samsung Experience Store Viva City Mall" },
+    { region: "Samsung Experience Store Pratap Nagar" },
+    { region: "Samsung Experience Store Mansarovar" }
+  ],
+  Indore: [
+    { region: "Samsung Experience Store Phoenix Citadel" },
+    { region: "Samsung Experience Store City Center" }
+  ],
+  Dehradun: [
+    { region: "Samsung Experience Store Centrio Mall" },
+    { region: "Samsung Experience Store Nehru Colony" }
   ]
 };
-
 
 const Ranking = () => {
   const datePickerRef = useRef(null);
@@ -71,11 +98,9 @@ const Ranking = () => {
   const [region, setRegion] = useState('');
   const [store, setStore] = useState('');
   const [date, setDate] = useState(null);
-  const [setFilter, setSetFilter] = useState('');
 
   const [isCityOpen, setCityOpen] = useState(false);
   const [isRegionOpen, setRegionOpen] = useState(false);
-  const [isSetOpen, setIsSetOpen] = useState(false);
 
   useEffect(() => {
     const ws = new WebSocket("wss://microsite-pbec.onrender.com");
@@ -96,32 +121,26 @@ const Ranking = () => {
   }, []);
 
   useEffect(() => {
-    const filterData = () => {
-      const filtered = data
-        .filter(entry => {
-          const matchesRegion = region ? entry.Region === region : true;
-          const matchesStore = store ? entry.Store === store : true;
-          const matchesDate = date ? entry.Date === format(date, 'yyyy-MM-dd') : true;
-          const matchesSet = setFilter ? entry.Sets === setFilter : true;
-          return matchesRegion && matchesStore && matchesDate && matchesSet;
-        })
-        .map((entry, index) => ({ ...entry, serial: index + 1 }));
-      setFilteredData(filtered);
-    };
+    const filtered = data
+      .filter(entry => {
+        const matchesRegion = region ? entry.Region === region : true;
+        const matchesStore = store ? entry.Store === store : true;
+        const matchesDate = date ? entry.Date === format(date, 'yyyy-MM-dd') : true;
+        return matchesRegion && matchesStore && matchesDate;
+      })
+      .map((entry, index) => ({ ...entry, serial: index + 1 }));
 
-    filterData();
-  }, [data, region, store, date, setFilter]);
+    setFilteredData(filtered);
+  }, [data, region, store, date]);
 
   const handleRegionChange = (selectedRegion) => {
     setRegion(selectedRegion);
     setStore('');
-    setSetFilter('');
     setCityOpen(false);
   };
 
   const handleStoreChange = (selectedStore) => {
     setStore(selectedStore);
-    setSetFilter('');
     setRegionOpen(false);
   };
 
@@ -130,7 +149,6 @@ const Ranking = () => {
       if (!event.target.closest('.dropdown-container')) {
         setCityOpen(false);
         setRegionOpen(false);
-        setIsSetOpen(false);
       }
     };
 
@@ -141,8 +159,8 @@ const Ranking = () => {
   }, []);
 
   return (
-    <main className="relative w-full flex-grow text-white ">
-      {/* Blurred Background */}
+    <main className="relative w-full flex-grow text-white">
+      {/* Background */}
       <div
         className="absolute inset-0 z-0 bg-main-bg"
         style={{
@@ -154,25 +172,29 @@ const Ranking = () => {
         }}
       />
 
-      {/* Content Overlay */}
+      {/* Content */}
       <div className="relative z-10 min-h-screen p-2 sm:p-4 md:p-8 w-full">
         <div className="max-w-7xl mx-auto bg-transparent rounded shadow-md mb-4 md:mb-6">
+
+          {/* Filters */}
           <div className="flex flex-col w-full items-center space-y-3 md:space-y-4 mb-4 md:mb-6 px-2 md:px-6">
-            {/* City Dropdown */}
+
+            {/* City */}
             <div className="w-full md:w-2/3 dropdown-container relative">
               <button
                 onClick={() => setCityOpen(!isCityOpen)}
-                className="w-full bg-gray-900 bg-opacity-50 text-white py-3 px-4 rounded-lg text-base focus:outline-none  flex justify-between items-center"
+                className="w-full bg-gray-900 bg-opacity-50 text-white py-3 px-4 rounded-lg flex justify-between items-center"
               >
                 <span>{region || "Select Your City"}</span>
-                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isCityOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-5 h-5 ${isCityOpen ? 'rotate-180' : ''}`} />
               </button>
+
               {isCityOpen && (
-                <div className="absolute w-full mt-1 bg-[#1c0e3b] border border-gray-700  rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
+                <div className="absolute w-full mt-1 bg-[#1c0e3b] rounded-lg max-h-60 overflow-y-auto z-50">
                   {Object.keys(locations).map(city => (
                     <div
                       key={city}
-                      className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
+                      className="px-4 py-2 hover:bg-gray-800 cursor-pointer"
                       onClick={() => handleRegionChange(city)}
                     >
                       {city}
@@ -182,97 +204,71 @@ const Ranking = () => {
               )}
             </div>
 
-            {/* Region Dropdown */}
+            {/* Store */}
             <div className="w-full md:w-2/3 dropdown-container relative">
               <button
                 onClick={() => region && setRegionOpen(!isRegionOpen)}
                 disabled={!region}
-                className={`w-full bg-gray-900 bg-opacity-50 text-white py-3 px-4 rounded-lg text-base  flex justify-between items-center ${!region && 'opacity-50 cursor-not-allowed'}`}
+                className={`w-full bg-gray-900 bg-opacity-50 py-3 px-4 rounded-lg flex justify-between items-center ${!region && 'opacity-50'}`}
               >
-                <span>{store || "Select Your Samsung Experience Store"}</span>
-                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isRegionOpen ? 'rotate-180' : ''}`} />
+                <span>{store || "Select Store"}</span>
+                <ChevronDown className={`w-5 h-5 ${isRegionOpen ? 'rotate-180' : ''}`} />
               </button>
-              {isRegionOpen && region && (
-                <div className="absolute w-full mt-1 bg-[#1c0e3b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
-                  {locations[region].map(({ region: storeRegion }) => (
+
+              {isRegionOpen && (
+                <div className="absolute w-full mt-1 bg-[#1c0e3b] rounded-lg max-h-60 overflow-y-auto z-50">
+                  {locations[region]?.map(({ region: s }) => (
                     <div
-                      key={storeRegion}
-                      className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
-                      onClick={() => handleStoreChange(storeRegion)}
+                      key={s}
+                      className="px-4 py-2 hover:bg-gray-800 cursor-pointer"
+                      onClick={() => handleStoreChange(s)}
                     >
-                      {storeRegion}
+                      {s}
                     </div>
                   ))}
                 </div>
               )}
             </div>
 
-            {/* Set Dropdown */}
-            <div className="w-full md:w-2/3 dropdown-container relative">
-              <button
-                onClick={() => setIsSetOpen(!isSetOpen)}
-                className="w-full bg-gray-900  bg-opacity-50 text-white py-3 px-4 rounded-lg text-base focus:outline-none flex justify-between items-center"
-              >
-                <span>{setFilter || "Select Set"}</span>
-                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isSetOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {isSetOpen && (
-                <div className="absolute w-full mt-1 bg-[#1c0e3b] border border-gray-700 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
-                  {["Set A", "Set B", "Set C"].map(setName => (
-                    <div
-                      key={setName}
-                      className="px-4 py-2 m-1 rounded-lg hover:bg-gray-800 cursor-pointer"
-                      onClick={() => {
-                        setSetFilter(setName);
-                        setIsSetOpen(false);
-                      }}
-                    >
-                      {setName}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Date Input */}
+            {/* Date */}
             <div className="w-full md:w-2/3" onClick={() => datePickerRef.current.setOpen(true)}>
-              <div className="flex flex-row items-center justify-between w-full cursor-pointer bg-gray-900 bg-opacity-50 text-white py-3 px-4 rounded-lg text-base focus:outline-none">
+              <div className="flex items-center justify-between bg-gray-900 bg-opacity-50 py-3 px-4 rounded-lg cursor-pointer">
                 <DatePicker
                   ref={datePickerRef}
                   selected={date}
-                  onChange={(date) => setDate(date)}
-                  placeholderText="Select the Date"
+                  onChange={(d) => setDate(d)}
+                  placeholderText="Select Date"
                   dateFormat="yyyy-MM-dd"
-                  className="cursor-pointer w-full bg-gray-900 bg-opacity-0 text-white rounded-lg text-base focus:outline-none"
+                  className="bg-transparent w-full text-white outline-none"
                 />
-                <img src={Calendar} className="h-6 w-6" alt="Calendar Icon" />
+                <img src={Calendar} className="h-6 w-6" alt="Calendar" />
               </div>
             </div>
+
           </div>
 
-          {/* Table Section */}
-          <div className="w-full overflow-x-auto overflow-y-auto border-gray-900 border rounded-xl" style={{ maxHeight: '70vh', scrollbarWidth: 'none' }}>
-            <div className="min-w-full inline-block align-middle">
-              <div className="overflow-hidden">
-                <table className="min-w-full divide-y divide-gray-700">
-                  <thead className="bg-gray-900 bg-opacity-50">
-                    <tr>
-                      <th className="px-3 md:px-4 py-2 md:py-3 text-center text-xs md:text-sm font-semibold text-white uppercase tracking-wider w-1/6 border-r-2 border-gray-500">Ranking</th>
-                      <th className="px-3 md:px-4 py-2 md:py-3 text-center text-xs md:text-sm font-semibold text-white uppercase tracking-wider w-1/2 md:w-1/3 border-r-2 border-gray-500">Name</th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-gray-900 bg-opacity-10 divide-y divide-gray-700">
-                    {filteredData.map((entry, index) => (
-                      <tr key={index} className="hover:bg-gray-800 hover:bg-opacity-50 transition-colors duration-200">
-                        <td className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm text-white border-r-2 border-gray-500 text-center">{entry.serial}</td>
-                        <td className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm text-white border-r-2 border-gray-500 text-center">{entry.Name}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
+          {/* Table */}
+          <div className="w-full overflow-auto border rounded-xl" style={{ maxHeight: '70vh' }}>
+            <table className="min-w-full">
+              <thead className="bg-gray-900 bg-opacity-50">
+                <tr>
+                  <th className="py-3 text-center">Ranking</th>
+                  <th className="py-3 text-center">Name</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {filteredData.map((entry, index) => (
+                  <tr key={index} className="text-center hover:bg-gray-800">
+                    <td className="py-2">{entry.serial}</td>
+                    <td className="py-2">{entry.Name}</td>
+                  </tr>
+                ))}
+              </tbody>
+
+            </table>
           </div>
+
         </div>
       </div>
     </main>

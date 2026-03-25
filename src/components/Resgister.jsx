@@ -3,101 +3,103 @@ import arrow from '../assets/rightarrow.png';
 
 const locations = {
   Delhi: [
-    { region: "The British Motor Car Company Pvt Ltd (21 Mar 2026)" },
-    { region: "Parama Retail Solutions (India) Pvt Ltd (29 Mar 2026)" },
-    { region: "Spectra & Star Convergence Limited (05 Apr 2026)" },
-    { region: "Star Mobitel Ltd South Ex (19 Apr 2026)" }
+    { region: "Samsung Experience Store Connaught Place (28 Mar 2026)" },
+    { region: "Samsung Experience Store Select CityWalk (29 Mar 2026)" },
+    { region: "Samsung Experience Store Ambience Mall (05 Apr 2026)" },
+    { region: "Samsung Experience Store South Extension II (19 Apr 2026)" }
   ],
 
   Gurgaon: [
-    { region: "Spectra & Star Convergence Limited (21 Mar 2026)" },
-    { region: "Spectra & Star Convergence Limited (22 Mar 2026)" }
-  ],
-
-  Chandigarh: [
-    { region: "Electro Photo Equipments Pvt Ltd (11 Apr 2026)" },
-    { region: "Electro Photo Equipments (Sec-35C) (12 Apr 2026)" },
-    { region: "Anmol Watches & Electronics Pvt Ltd (18 Apr 2026)" },
-    { region: "CP67 Mohali (19 Apr 2026)" }
-  ],
-
-  Pune: [
-    { region: "ABM Delight (04 Apr 2026)" },
-    { region: "Kopa Mall Pune (05 Apr 2026)" },
-    { region: "Orison Retail Viman Nagar (11 Apr 2026)" },
-    { region: "Karuna Management Services Ltd (11 Apr 2026)" },
-    { region: "Mehta Telecom Pvt Ltd (12 Apr 2026)" }
-  ],
-
-  Mumbai: [
-    { region: "Swiftlink Andheri (21 Mar 2026)" },
-    { region: "Palm Beach Galleria (22 Mar 2026)" },
-    { region: "GP Telecom Sky City (28 Mar 2026)" },
-    { region: "Swiftlink Connections Pvt Ltd (Phoenix Kurla) (29 Mar 2026)" },
-    { region: "GP Telecom Pvt Ltd (Inorbit) (04 Apr 2026)" },
-    { region: "Swiftlink Connections Pvt Ltd (Phoenix Lower Parel) (05 Apr 2026)" }
-  ],
-
-  Bengaluru: [
-    { region: "Concepts MOA (22 Mar 2026)" },
-    { region: "Innisfree Ventures (BSW) (28 Mar 2026)" },
-    { region: "Innesfree Retail LLP (Koramangala) (29 Mar 2026)" },
-    { region: "ABM Delight (18 Apr 2026)" }
-  ],
-
-  Kolkata: [
-    { region: "Park Street Kolkata (05 Apr 2026)" },
-    { region: "South City Kolkata (19 Apr 2026)" }
-  ],
-
-  Chennai: [
-    { region: "Ziptech Enterprises Pvt Ltd (28 Mar 2026)" },
-    { region: "Express Chennai (04 Apr 2026)" },
-    { region: "IT World Forum Vijaya Mall (05 Apr 2026)" },
-    { region: "IT World Velachery Phoenix (11 Apr 2026)" },
-    { region: "VR Mall Chennai (12 Apr 2026)" }
-  ],
-
-  Surat: [
-    { region: "Bhatia Communication IBC Cafe (21 Mar 2026)" },
-    { region: "Shivam Sales (22 Mar 2026)" }
+    { region: "Samsung Experience Store Cyberhub (28 Mar 2026)" },
+    { region: "Samsung Experience Store Bestech Mall (31 Mar 2026)" }
   ],
 
   Ahmedabad: [
-    { region: "Prince Communication Science City (21 Mar 2026)" },
-    { region: "VTech NxtGen Retails LLP (Palladium) (22 Mar 2026)" },
-    { region: "VTech NxtGen Retails LLP (28 Mar 2026)" },
-    { region: "VTech NxtGen Retails LLP (Ishanpur) (29 Mar 2026)" }
+    { region: "Samsung Experience Store Science City (28 Mar 2026)" },
+    { region: "Samsung Experience Store Bhagwan Nagar (29 Mar 2026)" },
+    { region: "Samsung Experience Store Palladium Ahmedabad (31 Mar 2026)" },
+    { region: "Samsung Experience Store Navrangpura (04 Apr 2026)" }
+  ],
+
+  Surat: [
+    { region: "Samsung Experience Store IBC Surat (28 Mar 2026)" },
+    { region: "Samsung Experience Store Adajan (31 Mar 2026)" }
+  ],
+
+  Mumbai: [
+    { region: "Samsung Experience Store SkyCity Mall (28 Mar 2026)" },
+    { region: "Samsung Experience Store Andheri West (29 Mar 2026)" },
+    { region: "Samsung Experience Store Kurla (29 Mar 2026)" },
+    { region: "Samsung Experience Store Inorbit Mall (04 Apr 2026)" },
+    { region: "Samsung Experience Store Phoenix Palladium (05 Apr 2026)" },
+    { region: "Samsung Experience Store Palm Beach (31 Mar 2026)" }
+  ],
+
+  Bengaluru: [
+    { region: "Samsung Experience Store Basaveshwara Nagar (28 Mar 2026)" },
+    { region: "Samsung Experience Store Mall of Asia (29 Mar 2026)" },
+    { region: "Samsung Experience Store Koramangala (11 Apr 2026)" },
+    { region: "Samsung Experience Store Brigade Road (18 Apr 2026)" }
   ],
 
   Hyderabad: [
-    { region: "Lake Shore Hyderabad (28 Mar 2026)" },
-    { region: "Inorbit Mall Hyderabad (29 Mar 2026)" }
+    { region: "Samsung Experience Store Lake Shore (28 Mar 2026)" },
+    { region: "Samsung Experience Store Inorbit Mall (29 Mar 2026)" }
   ],
 
-  Jaipur: [
-    { region: "MI Road Jaipur (11 Apr 2026)" },
-    { region: "Shri Shyam Fabrication (12 Apr 2026)" },
-    { region: "Khandelwal Tele Services Pvt Ltd (18 Apr 2026)" },
-    { region: "SS Associates (19 Apr 2026)" }
+  Chennai: [
+    { region: "Samsung Experience Store Adyar (28 Mar 2026)" },
+    { region: "Samsung Experience Store Express Avenue (29 Mar 2026)" },
+    { region: "Samsung Experience Store Nexus Vijaya Mall (05 Apr 2026)" },
+    { region: "Samsung Experience Store Phoenix Velachery (11 Apr 2026)" },
+    { region: "Samsung Experience Store VR Mall (12 Apr 2026)" }
   ],
 
-  Indore: [
-    { region: "RM Chemicals Citadel (12 Apr 2026)" },
-    { region: "Krishna Communication MIT (18 Apr 2026)" }
-  ],
-
-  Dehradun: [
-    { region: "Electrophoto Equipments Pvt Ltd (18 Apr 2026)" },
-    { region: "Infiniti Enterprises (19 Apr 2026)" }
+  Pune: [
+    { region: "Samsung Experience Store Viman Nagar (29 Mar 2026)" },
+    { region: "Samsung Experience Store Mall of Millennium (04 Apr 2026)" },
+    { region: "Samsung Experience Store Kopa Mall (05 Apr 2026)" },
+    { region: "Samsung Experience Store Phoenix MarketCity (11 Apr 2026)" },
+    { region: "Samsung Experience Store Vishrantwadi (12 Apr 2026)" }
   ],
 
   Bhubaneswar: [
-    { region: "Cell Net Telelinks Samsung Cafe (04 Apr 2026)" },
-    { region: "Banashree Mobile Samsung Cafe (05 Apr 2026)" }
+    { region: "Samsung Experience Store Patia (04 Apr 2026)" },
+    { region: "Samsung Experience Store Khorda (05 Apr 2026)" }
+  ],
+
+  Kolkata: [
+    { region: "Samsung Experience Store Park Street (05 Apr 2026)" },
+    { region: "Samsung Experience Store South City Mall (19 Apr 2026)" }
+  ],
+
+  Chandigarh: [
+    { region: "Samsung Experience Store Elante Mall (11 Apr 2026)" },
+    { region: "Samsung Experience Store Sector 35C (12 Apr 2026)" },
+    { region: "Samsung Experience Store Manimajra (18 Apr 2026)" }
+  ],
+
+  Mohali: [
+    { region: "Samsung Experience Store CP67 Mall (19 Apr 2026)" }
+  ],
+
+  Jaipur: [
+    { region: "Samsung Experience Store MI Road (11 Apr 2026)" },
+    { region: "Samsung Experience Store Viva City Mall (12 Apr 2026)" },
+    { region: "Samsung Experience Store Pratap Nagar (18 Apr 2026)" },
+    { region: "Samsung Experience Store Mansarovar (19 Apr 2026)" }
+  ],
+
+  Indore: [
+    { region: "Samsung Experience Store Phoenix Citadel (12 Apr 2026)" },
+    { region: "Samsung Experience Store City Center (18 Apr 2026)" }
+  ],
+
+  Dehradun: [
+    { region: "Samsung Experience Store Centrio Mall (18 Apr 2026)" },
+    { region: "Samsung Experience Store Nehru Colony (19 Apr 2026)" }
   ]
 };
-
 
 
 

@@ -13,43 +13,71 @@ if (!sheetId || !apiKey) {
   process.exit(1);
 }
 
-// ✅ Extend the range to include column F (i.e., Sets column)
+// Columns: A=Name, B=Region, C=Store, D=LapTime, E=Date, F=Sets
 const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A:F?key=${apiKey}`;
 
+// Handles both HH:MM:SS and MM:SS formats
 const lapTimeToSeconds = (lapTime) => {
-  const [hours, minutes, seconds] = lapTime.split(':').map(Number);
-  return hours * 3600 + minutes * 60 + seconds;
+  if (!lapTime || typeof lapTime !== 'string') return null;
+  const parts = lapTime.trim().split(':').map(Number);
+  if (parts.some(isNaN)) return null;
+
+  if (parts.length === 3) {
+    const [hours, minutes, seconds] = parts;
+    return hours * 3600 + minutes * 60 + seconds;
+  } else if (parts.length === 2) {
+    const [minutes, seconds] = parts;
+    return minutes * 60 + seconds;
+  }
+  return null;
 };
 
 const fetchSheetData = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    if (data.values) {
-      const leaderboard = data.values.slice(1).map(row => ({
-        Name: row[0],
-        Region: row[1],
-        Store: row[2],
-        LapTime: row[3],
-        Date: row[4],
-        Sets: row[5] || '', // ✅ Fetch Sets value, defaulting to empty if undefined
-        LapTimeInSeconds: lapTimeToSeconds(row[3])
-      }));
 
-      leaderboard.sort((a, b) => a.LapTimeInSeconds - b.LapTimeInSeconds);
-      return leaderboard.map((entry, index) => ({
-        Rank: index + 1,
-        Name: entry.Name,
-        Region: entry.Region,
-        Store: entry.Store,
-        LapTime: entry.LapTime,
-        Sets: entry.Sets, // ✅ Include Sets in final output
-        Date: entry.Date
-      }));
-    }
-    return [];
+    if (!data.values) return [];
+
+    const rows = data.values.slice(1); // skip header row
+
+    const valid = rows
+      .filter(row => {
+        const name = row[0]?.trim();
+        const lapTime = row[3]?.trim();
+        return name && lapTime; // skip rows with no name or no lap time
+      })
+      .map(row => {
+        const lapTimeInSeconds = lapTimeToSeconds(row[3]);
+        if (lapTimeInSeconds === null) return null; // skip malformed lap times
+        return {
+          Name: row[0].trim(),
+          Region: row[1]?.trim() || '',
+          Store: row[2]?.trim() || '',
+          LapTime: row[3].trim(),
+          Date: row[4]?.trim() || '',
+          Sets: row[5]?.trim() || '',
+          LapTimeInSeconds: lapTimeInSeconds
+        };
+      })
+      .filter(Boolean); // remove nulls from malformed lap times
+
+    valid.sort((a, b) => a.LapTimeInSeconds - b.LapTimeInSeconds);
+
+    console.log(`Valid leaderboard entries: ${valid.length}`);
+
+    return valid.map((entry, index) => ({
+      Rank: index + 1,
+      Name: entry.Name,
+      Region: entry.Region,
+      Store: entry.Store,
+      LapTime: entry.LapTime,
+      Sets: entry.Sets,
+      Date: entry.Date
+    }));
+
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error('Error fetching sheet data:', error);
     return [];
   }
 };
@@ -58,7 +86,7 @@ let leaderboardData = [];
 
 const updateLeaderboard = async () => {
   leaderboardData = await fetchSheetData();
-  console.log("Updated leaderboard data:", leaderboardData);
+  console.log("Leaderboard updated:", leaderboardData);
 
   wss.clients.forEach(client => {
     if (client.readyState === client.OPEN) {
@@ -77,4 +105,4 @@ wss.on('connection', ws => {
   ws.on('error', error => console.error('WebSocket error:', error));
 });
 
-console.log(`WebSocket server is running on ws://localhost:${PORT}`);
+console.log(`WebSocket server running on ws://localhost:${PORT}`);

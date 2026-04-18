@@ -83,7 +83,7 @@ const locations = {
   ],
   Indore: [
     { region: "Samsung Experience Store Phoenix Citadel" },
-    { region: "Samsung Experience Store City Center" }
+    { region: "Samsung Experience Store Tirupati Nagar" }
   ],
   Dehradun: [
     { region: "Samsung Experience Store Centrio Mall" },

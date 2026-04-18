@@ -92,7 +92,7 @@ const locations = {
 
   Indore: [
     { region: "Samsung Experience Store Phoenix Citadel (12 Apr 2026)" },
-    { region: "Samsung Experience Store City Center (18 Apr 2026)" }
+    { region: "Samsung Experience Store Tirupati Nagar (18 Apr 2026)" }
   ],
 
   Dehradun: [

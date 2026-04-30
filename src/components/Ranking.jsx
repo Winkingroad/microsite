@@ -15,7 +15,7 @@ const locations = {
   ],
   Gurgaon: [
     { region: "Samsung Experience Store Cyberhub" },
-    { region: "Samsung Experience Store Bestech Mall" }
+    { region: "Samsung Experience Store Ambience Mall" }
   ],
   Ahmedabad: [
     { region: "Samsung Experience Store Science City" },

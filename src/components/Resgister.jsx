@@ -11,7 +11,7 @@ const locations = {
 
   Gurgaon: [
     { region: "Samsung Experience Store Cyberhub (28 Mar 2026)" },
-    { region: "Samsung Experience Store Bestech Mall (31 Mar 2026)" }
+    { region: "Samsung Experience Store Ambience Mall (31 Mar 2026)" }
   ],
 
   Ahmedabad: [
